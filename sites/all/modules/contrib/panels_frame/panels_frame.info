@@ -1,0 +1,14 @@
+name = Panels Frame
+description = Layout builder for compiling multiple layouts into one.
+package = Panels
+core = 7.x
+
+dependencies[] = ctools
+dependencies[] = panels
+
+; Information added by drupal.org packaging script on 2013-05-25
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "panels_frame"
+datestamp = "1369442162"
+
