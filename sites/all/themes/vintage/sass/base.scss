@@ -22,3 +22,23 @@
 /* @import "theme-A"; */
 /* @import "theme-B"; */
 
+
+body {
+	background: #f0f0f0;
+}
+
+.not-logged-in.page-user {
+	.pane-pane-messages {
+		background: #fff;
+		padding: 10px;
+		margin-top: 20px;
+	}
+	.user-login {
+		background: #fff;
+		padding: 30px;
+	}
+	h2 {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+}

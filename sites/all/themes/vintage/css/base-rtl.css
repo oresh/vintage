@@ -42,15 +42,13 @@
  * Lists
  */
 dd {
-  margin: 0 30px 0 0;
-}
+  margin: 0 30px 0 0; }
 
 /* Address paddings set differently in IE 6/7. */
 menu,
 ol,
 ul {
-  padding: 0 30px 0 0;
-}
+  padding: 0 30px 0 0; }
 
 /* Component (SMACSS module) rules */
 /**
@@ -62,13 +60,11 @@ ul {
  */
 /* Wrapping link for logo. */
 .header__logo {
-  float: right;
-}
+  float: right; }
 
 /* The secondary menu (login, etc.) */
 .header__secondary-menu {
-  float: left;
-}
+  float: left; }
 
 /**
  * Navigation bar.
@@ -76,30 +72,26 @@ ul {
 /* Main menu and secondary menu links and menu block links. */
 #navigation .links,
 #navigation .menu {
-  text-align: right;
-}
-#navigation .links li,
-#navigation .menu li {
-  /* A simple method to get navigation links to appear in one line. */
-  float: right;
-  padding: 0 0 0 10px;
-}
+  text-align: right; }
+  #navigation .links li,
+  #navigation .menu li {
+    /* A simple method to get navigation links to appear in one line. */
+    float: right;
+    padding: 0 0 0 10px; }
 
 /**
  * Messages.
  */
 .messages, .messages--status, .messages--warning, .messages--error {
   padding: 10px 50px 10px 10px;
-  background-position: 99% 8px;
-}
+  background-position: 99% 8px; }
 
 /**
  * Tabs.
  */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
-  float: right;
-}
+  float: right; }
 
 /**
  * Inline styles.
@@ -108,36 +100,30 @@ ul {
 .inline li {
   /* Bug in Safari causes display: inline to fail. */
   display: inline-block;
-  padding: 0 0 0 1em;
-}
+  padding: 0 0 0 1em; }
 
 /* The inline field label used by the Fences.module */
 span.field-label {
-  padding: 0 0 0 1em;
-}
+  padding: 0 0 0 1em; }
 
 /**
  * "More" links.
  */
 .more-link {
-  text-align: left;
-}
+  text-align: left; }
 
 .more-help-link {
-  text-align: left;
-}
+  text-align: left; }
 
 .more-help-link a {
   background-position: 100% 50%;
-  padding: 1px 20px 1px 0;
-}
+  padding: 1px 20px 1px 0; }
 
 /**
  * Menus.
  */
 .menu__item.is-collapsed {
-  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-}
+  list-style-image: inline-image("menu-collapsed-rtl.png"); }
 
 /**
  * Comments.
@@ -145,23 +131,20 @@ span.field-label {
 /* Nested comments are indented. */
 .indented {
   margin-left: 0;
-  margin-right: 30px;
-}
+  margin-right: 30px; }
 
 /**
  * Forms.
  */
 /* Drupal's default login form block */
 #user-login-form {
-  text-align: right;
-}
+  text-align: right; }
 
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
   margin-left: 0;
-  margin-right: -20px;
-}
+  margin-right: -20px; }
 
 /*
  * Drupal admin tables.
@@ -169,8 +152,7 @@ html.js #user-login-form li.openid-link,
 form th {
   text-align: right;
   padding-left: 1em;
-  padding-right: 0;
-}
+  padding-right: 0; }
 
 /**
  * Collapsible fieldsets.
@@ -180,12 +162,10 @@ form th {
 html.js .collapsible .fieldset-legend {
   background-position: 98% 75%;
   padding-left: 0;
-  padding-right: 15px;
-}
+  padding-right: 15px; }
 html.js .collapsed .fieldset-legend {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-  background-position: 98% 50%;
-}
+  background-image: inline-image("menu-collapsed-rtl.png");
+  background-position: 98% 50%; }
 
 /**
  * @file
@@ -202,38 +182,31 @@ html.js .collapsed .fieldset-legend {
   a:link,
   a:visited {
     text-decoration: underline !important;
-    /* Don't underline header. */
-  }
-  a:link.header__site-link,
-  a:visited.header__site-link {
-    text-decoration: none !important;
-  }
+    /* Don't underline header. */ }
+    a:link.header__site-link,
+    a:visited.header__site-link {
+      text-decoration: none !important; }
 
   #content {
     /* Add visible URL after links. */
     /* Only display useful links. */
-    /* Add visible title after abbreviations. */
-  }
-  #content a[href]:after {
-    content: " (" attr(href) ")";
-    font-weight: normal;
-    font-size: 16px;
-  }
-  #content a[href^="javascript:"]:after,
-  #content a[href^="#"]:after {
-    content: "";
-  }
-  #content abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
+    /* Add visible title after abbreviations. */ }
+    #content a[href]:after {
+      content: " (" attr(href) ")";
+      font-weight: normal;
+      font-size: 16px; }
+    #content a[href^="javascript:"]:after,
+    #content a[href^="#"]:after {
+      content: ""; }
+    #content abbr[title]:after {
+      content: " (" attr(title) ")"; }
 
   /* Un-float the content. */
   #content {
     float: none !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 0 !important;
-  }
+    padding: 0 !important; }
 
   /* Turn off any background colors or images. */
   body,
@@ -242,8 +215,7 @@ html.js .collapsed .fieldset-legend {
   #content {
     color: #000;
     background-color: transparent !important;
-    background-image: none !important;
-  }
+    background-image: none !important; }
 
   /* Hide sidebars and nav elements. */
   #skip-link,
@@ -261,9 +233,9 @@ html.js .collapsed .fieldset-legend {
   .pager,
   .feed-icons {
     visibility: hidden;
-    display: none;
-  }
-}
+    display: none; } }
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+
+/*# sourceMappingURL=base-rtl.css.map */

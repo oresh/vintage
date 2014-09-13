@@ -8,6 +8,24 @@
  * https://drupal.org/node/1707736
  */
 
+ @mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+ }
+
+ @mixin border-top-radius($x) {
+  border-top-radius: $x;
+ }
+
+@mixin single-text-shadow($color, $offset-x, $offset-y, $size) {
+  -webkit-text-shadow: $offset-x $offset-y $size $color;
+  -moz-text-shadow: $offset-x $offset-y $size $color;
+  text-shadow: $offset-x $offset-y $size $color;
+}
+
  $legacy_browser_support: false !default;
 
 /**
@@ -99,7 +117,6 @@
 /* The name of the website. */
 .header__site-name {
   margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
 }
 
 /* The link around the name of the website. */
@@ -266,7 +283,6 @@
 /* Basic positioning styles shared by primary and secondary tabs. */
 %tabs {
   @include clearfix;
-  @include background-image(linear-gradient(bottom, $tabs-border 1px, transparent 1px));
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
   border-bottom: 1px solid $tabs-border \0/ie;
@@ -283,7 +299,6 @@
   border-right: 0;
   border-bottom: 0;
   display: block;
-  @include adjust-leading-to(1);
   text-decoration: none;
 }
 
@@ -309,7 +324,6 @@
 %tabs-primary__tab-link {
   @extend %tabs__tab-link;
   @include border-top-radius(4px);
-  @include transition(background-color 0.3s);
   color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
@@ -322,8 +336,6 @@
 }
 %tabs-primary__tab-link-is-active {
   background-color: transparent;
-  @include filter-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0));
-  @include background-image(linear-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0)));
   border-color: #fff;
 }
 
@@ -359,8 +371,6 @@ a.tabs-primary__tab-link.is-active {
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
 %tabs-secondary__tab-link {
   @extend %tabs__tab-link;
-  @include border-radius(.75em);
-  @include transition(background-color 0.3s);
   @include single-text-shadow(#fff, 1px, 1px, 0);
   background-color: #f2f2f2;
   color: #666;
@@ -554,7 +564,7 @@ span.field-label {
   margin: rhythm(1) 0;
 }
 
-/* Preview of the comment before submitting new or updated comment. */
+/* Preview of the comment submitting new or updated comment. */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
@@ -630,7 +640,6 @@ label.option {
 
 /* Buttons used by contrib modules like Media. */
 a.button {
-  @include appearance(button);
 }
 
 /* Password confirmation. */
@@ -800,7 +809,6 @@ tr.selected td {
     background: #ccc;
     border-color: #666;
     margin: 0 0.2em;
-    @include border-radius(3px);
   }
   .filled {
     background-color: #0072b9;
