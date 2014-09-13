@@ -5,6 +5,8 @@ base theme	= circle
 
 ; Theme styles
 stylesheets[all][] = css/base.css
+stylesheets[all][] = css/main.css
+
 
 ; Theme scripts
 scripts[] = js/main.js
