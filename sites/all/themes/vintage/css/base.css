@@ -1084,6 +1084,7 @@ body {
   background: #fff;
   padding: 30px; }
 .not-logged-in.page-user h2 {
+  font-size: 30px;
   margin-bottom: 15px;
   text-align: center; }
 
