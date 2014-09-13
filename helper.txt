@@ -1,0 +1,88 @@
+
+
+Get latest databse:
+http://v1ntage.com/#overlay=admin/config/system/backup_migrate/export/advanced
+Compression -> no compression; download
+
+Uodate database:
+http://vintage.local:8083/user#overlay=admin/config/system/backup_migrate/restore
+Choose backup file; Push 'Restore Now' button.
+
+
+
+Code derictory:
+
+cd /Users/anatoldragan/Sites/vintage
+
+
+Sass(Theme) derictory:
+cd sites/all/themes/vintage
+
+Start sass:
+
+sass --watch sass:css
+
+
+Get letest code:
+git pull origin master
+
+
+
+
+Create branch:
+git status
+
+
+git checkout master
+git pull origin master
+>> downloads the latest code from master
+
+git checkout -b branch-name
+>> creates a new branch with latest code
+
+
+
+Make changes and push:
+
+
+
+>> make changes
+
+git add .
+git add -u
+git status
+>> check if all files have beed added
+
+git commit -m "Commit message"
+>> Name your changes
+
+git status
+
+git pull origin branch-name
+git push origin branch-name
+
+>> hurray!
+
+
+
+change branches:
+
+git checkout master
+git pull origin master
+git checkout other-branch-name
+git pull origin other-branch-name
+
+
+
+
+checkout = switch to branch.
+checkout -b = create new branch and switch to it
+
+Branches:
+
+1. user forms (register, login, forgot, register 2nd step)
+2. User profile page
+3. Gallery
+4. Picture single page
+5. Additional pages
+
