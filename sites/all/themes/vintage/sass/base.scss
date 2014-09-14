@@ -23,11 +23,17 @@
 /* @import "theme-B"; */
 
 
+
+/*  -------  header-user-form  ------  */
 body {
 	background: #f7f7f7;
 }
 
+.panel-pane .pane-pane-header {
+	.logo-wrapper {
 
+	}
+}
 
 /*  -------  user-register-form  ------  */
 .user-info-from-cookie.user-register-form, .not-logged-in.page-user, .user-pass {
@@ -118,6 +124,7 @@ body {
 		}
 	}
 }
+
 
 
 
