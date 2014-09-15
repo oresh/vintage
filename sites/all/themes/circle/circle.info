@@ -39,6 +39,8 @@ settings[circle_js_foundation_version] = 4.3.2
 ; - Libraries
 settings[circle_css_foundation_local] = 0
 settings[circle_js_foundation_local] = 0
+settings[circle_css_foundation5_local] = 0
+settings[circle_js_foundation5_local] = 0
 settings[circle_css_bootstrap_local] = 0
 settings[circle_js_bootstrap_local] = 0
 settings[circle_modernizr_local] = 0
@@ -60,10 +62,3 @@ settings[breadcrumb_hide_single] = 0
 ; - Circle Features
 settings[humanstxt] = 1
 settings[circle_css_framework] = bootstrap
-
-; Information added by Drupal.org packaging script on 2014-05-07
-version = "7.x-1.6"
-core = "7.x"
-project = "circle"
-datestamp = "1399488838"
-

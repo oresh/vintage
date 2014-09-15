@@ -1119,29 +1119,9 @@ body {
       opacity: 0.85; }
 
 /*  -------  user-register-form  ------  */
-.user-info-from-cookie.user-register-form .pane-pane-messages, .not-logged-in.page-user .pane-pane-messages, .user-pass .pane-pane-messages {
-  padding: 10px;
-  margin-top: 20px;
-  border-bottom: 1px solid #f0f0f0; }
-  .user-info-from-cookie.user-register-form .pane-pane-messages .tabs.primary li, .not-logged-in.page-user .pane-pane-messages .tabs.primary li, .user-pass .pane-pane-messages .tabs.primary li {
-    list-style: none;
-    display: block;
-    padding: 5px 0; }
-    .user-info-from-cookie.user-register-form .pane-pane-messages .tabs.primary li a, .not-logged-in.page-user .pane-pane-messages .tabs.primary li a, .user-pass .pane-pane-messages .tabs.primary li a {
-      color: #222222;
-      text-decoration: none;
-      font-family: 'open sans', sans-serif;
-      font-size: 16px;
-      transition: 250ms linear all; }
-      .user-info-from-cookie.user-register-form .pane-pane-messages .tabs.primary li a:hover, .not-logged-in.page-user .pane-pane-messages .tabs.primary li a:hover, .user-pass .pane-pane-messages .tabs.primary li a:hover {
-        opacity: 0.7; }
-.user-info-from-cookie.user-register-form h2, .not-logged-in.page-user h2, .user-pass h2 {
-  font-size: 30px;
-  text-align: center;
-  margin: 60px auto 50px; }
-.user-info-from-cookie.user-register-form .form-required, .not-logged-in.page-user .form-required, .user-pass .form-required {
+.pane-page-content form .form-required {
   margin-bottom: 35px; }
-.user-info-from-cookie.user-register-form label, .not-logged-in.page-user label, .user-pass label {
+.pane-page-content form label {
   color: #222222;
   text-decoration: none;
   font-family: 'open sans', sans-serif;
@@ -1149,7 +1129,7 @@ body {
   font-weight: normal;
   margin-left: 90px;
   margin-top: 8px; }
-.user-info-from-cookie.user-register-form input, .not-logged-in.page-user input, .user-pass input {
+.pane-page-content form input {
   width: 470px;
   height: 40px;
   border: 1px solid #f0f0f0;
@@ -1159,7 +1139,7 @@ body {
   right: 380px;
   position: relative;
   display: inline-block; }
-.user-info-from-cookie.user-register-form small, .not-logged-in.page-user small, .user-pass small {
+.pane-page-content form small {
   float: right;
   color: #555555;
   width: 30%;
@@ -1171,7 +1151,28 @@ body {
   display: inline-block;
   clear: right; }
 
-.form-actions.form-wrapper .form-submit {
+.pane-pane-messages {
+  padding: 10px;
+  margin-top: 20px;
+  border-bottom: 1px solid #f0f0f0; }
+  .pane-pane-messages .tabs.primary li {
+    list-style: none;
+    display: block;
+    padding: 5px 0; }
+    .pane-pane-messages .tabs.primary li a {
+      color: #222222;
+      text-decoration: none;
+      font-family: 'open sans', sans-serif;
+      font-size: 16px;
+      transition: 250ms linear all; }
+      .pane-pane-messages .tabs.primary li a:hover {
+        opacity: 0.7; }
+
+.not-logged-in.page-user h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 60px auto 50px; }
+.not-logged-in.page-user .form-actions.form-wrapper .form-submit {
   color: #fff;
   text-decoration: none;
   font-family: 'open sans', sans-serif;
@@ -1184,10 +1185,9 @@ body {
   line-height: 0;
   margin: 20px 0 0 510px;
   transition: 300ms linear all; }
-  .form-actions.form-wrapper .form-submit:hover {
+  .not-logged-in.page-user .form-actions.form-wrapper .form-submit:hover {
     opacity: .8; }
-
-.user-pass .form-actions.form-wrapper .form-submit {
+.not-logged-in.page-user .user-pass .form-actions.form-wrapper .form-submit {
   margin-top: 0; }
 
 /*  -------  user-account-form  ------  */
