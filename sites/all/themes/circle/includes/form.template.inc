@@ -17,10 +17,23 @@ function circle_form_alter(&$form, &$form_state, $form_id) {
  * Rewrite form element markup.
  */
 function circle_form_element($variables) {
-
   $element = &$variables['element'];
-
+  // This function is invoked as theme wrapper, but the rendered form element
+  // may not necessarily have been processed by form_builder().
+  $element += array(
+    '#title_display' => 'before',
+  );
   $attributes = isset($element['#attributes']) ? $element['#attributes'] : array();
+  // Password confirm bug fix.
+  if (isset($attributes['class']) && $attributes['class'][0] == 'password-confirm') {
+    unset($attributes['class'][0]);
+    $attributes['class'] = array_values($attributes['class']);
+  }
+
+  // Add element #id for #type 'item'.
+  if (isset($element['#markup']) && !empty($element['#id'])) {
+    $attributes['id'] = $element['#id'];
+  }
 
   if (!empty($element['#type'])) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
@@ -41,16 +54,13 @@ function circle_form_element($variables) {
     $attributes['class'][] = 'form-required';
   }
 
+  if (!empty($attributes)) {
+    $output = '<div' . drupal_attributes($attributes) . '>';
+  }
+
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
-  }
-
-  if (isset($attributes['class'])) {
-    $output = '<div' . drupal_attributes($attributes) . '>';
-  }
-  else {
-    $output = '<div>';
   }
 
   // Prefix and suffix markup improvements.
@@ -78,14 +88,11 @@ function circle_form_element($variables) {
 
     }
   }
-
   if (!empty($element['#description'])) {
     // Changes the description <div class="description"> to <small>.
     $output .= '<small class="description">' . $element['#description'] . '</small>';
   }
-
   $output .= '</div>';
-
   return $output;
 }
 
