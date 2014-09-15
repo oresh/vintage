@@ -990,7 +990,6 @@ tr.odd .form-item, tr.even .form-item {
 
 /* The part of the label that indicates a required field. */
 .form-required {
-  color: #c00;
 }
 
 /* Labels for radios and checkboxes. */

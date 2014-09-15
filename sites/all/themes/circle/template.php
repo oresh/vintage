@@ -92,19 +92,19 @@ function circle_preprocess(&$vars, $hook) {
           'preprocess' => FALSE,
         )
       );
-      drupal_add_css($path . '/css/ie9.css',
-        array(
-          'group' => CSS_THEME,
-          'weight' => 120,
-          'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE),
-          'preprocess' => FALSE,
-        )
-      );
       drupal_add_css($path . '/css/ie8.css',
         array(
           'group' => CSS_THEME,
+          'weight' => 120,
+          'browsers' => array('IE' => 'IE 8', '!IE' => FALSE),
+          'preprocess' => FALSE,
+        )
+      );
+      drupal_add_css($path . '/css/ie9.css',
+        array(
+          'group' => CSS_THEME,
           'weight' => 125,
-          'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE),
+          'browsers' => array('IE' => 'IE 9', '!IE' => FALSE),
           'preprocess' => FALSE,
         )
       );
@@ -175,6 +175,24 @@ function circle_preprocess(&$vars, $hook) {
           drupal_add_js($foundation . '/js/foundation.min.js');
         }
       }
+
+      // Add Foundation 5 locally.
+      if (theme_get_setting('circle_css_foundation5_local')) {
+        if ($foundation = libraries_get_path('foundation5')) {
+          drupal_add_css($foundation . '/css/foundation.min.css', array(
+            'group' => CSS_THEME,
+            'every_page' => TRUE,
+            'weight' => -18,
+          ));
+        }
+      }
+      // Add Foundation 5 JS locally.
+      if (theme_get_setting('circle_js_foundation5_local')) {
+        if ($foundation = libraries_get_path('foundation5')) {
+          drupal_add_js($foundation . '/js/foundation.min.js');
+        }
+      }
+
       if (theme_get_setting('circle_js_htmlshiv_local')) {
         if ($htmlshiv = libraries_get_path('htmlshiv')) {
           drupal_add_js($htmlshiv . '/js/html5.js');

@@ -10,6 +10,11 @@
 function circle_form_system_theme_settings_alter(&$form, $form_state) {
 
   $libraries_exists = module_exists('libraries');
+  $bootstrap_available = libraries_get_path('bootstrap') != FALSE;
+  $foundation4_available = libraries_get_path('foundation4') != FALSE;
+  $foundation5_available = libraries_get_path('foundation5') != FALSE;
+  $modernizr_available = libraries_get_path('modernizr') != FALSE;
+  $html_shiv_available = libraries_get_path('htmlshiv') != FALSE;
 
   $form['circle_info'] = array(
     '#prefix' => '<h3>Circle Theme Settings:</h3> ',
@@ -108,7 +113,7 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
     '#title'         => t('Add Bootstrap CSS locally.'),
     '#default_value' => theme_get_setting('circle_css_bootstrap_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/bootstrap)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists || !$bootstrap_available,
   );
 
   $form['bootstrap']['circle_js_bootstrap_local'] = array(
@@ -116,7 +121,7 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
     '#title'         => t('Add Bootstrap JavaScript locally.'),
     '#default_value' => theme_get_setting('circle_js_bootstrap_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/bootstrap)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists || !$bootstrap_available,
   );
 
   // Foundation settings.
@@ -163,17 +168,32 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
   );
   $form['foundation']['circle_css_foundation_local'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Add Foundation CSS locally.'),
+    '#title'         => t('Add Foundation 4 CSS locally.'),
     '#default_value' => theme_get_setting('circle_css_foundation_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/foundation)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists || !$foundation4_available,
   );
   $form['foundation']['circle_js_foundation_local'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Add Foundation JavaScript locally.'),
+    '#title'         => t('Add Foundation 4 JavaScript locally.'),
     '#default_value' => theme_get_setting('circle_js_foundation_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/foundation)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists || !$foundation4_available,
+  );
+
+  $form['foundation']['circle_css_foundation5_local'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Add Foundation 5 CSS locally.'),
+    '#default_value' => theme_get_setting('circle_css_foundation5_local'),
+    '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/foundation5)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
+    '#disabled' => !$libraries_exists || !$foundation5_available,
+  );
+  $form['foundation']['circle_js_foundation5_local'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Add Foundation 5 JavaScript locally.'),
+    '#default_value' => theme_get_setting('circle_js_foundation5_local'),
+    '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/foundation5)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
+    '#disabled' => !$libraries_exists || !$foundation5_available,
   );
 
   // JavaScript settings.
@@ -195,7 +215,7 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
     '#title'         => t('Add modernizr.js locally.'),
     '#default_value' => theme_get_setting('circle_modernizr_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder<em>(libraries/modernizr)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists|| !$modernizr_available,
   );
   $form['js']['circle_js_htmlshiv'] = array(
     '#type'          => 'checkbox',
@@ -205,10 +225,10 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
   );
   $form['js']['circle_js_htmlshiv_local'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Add html5.js locally'),
+    '#title'         => t('Add html5 support<em>(html5shiv)</em> for old browsers locally'),
     '#default_value' => theme_get_setting('circle_js_htmlshiv_local'),
     '#description'   => $libraries_exists ? t('File is taken from a locally installed library in libraries folder <em>(libraries/htmlshiv)</em>.') : t('Install and enable !libraries module to use this setting.', array('!libraries' => l(t('Libraries'), 'http://drupal.org/project/libraries'))),
-    '#disabled' => !$libraries_exists,
+    '#disabled' => !$libraries_exists || !$html_shiv_available,
   );
 
   $form['js']['circle_js_placeholder'] = array(
@@ -315,26 +335,46 @@ function circle_form_system_theme_settings_alter(&$form, $form_state) {
  * Theme settings validation.
  */
 function circle_validate_libraries(&$form, &$form_state) {
-  $fn_css_checked = isset($form_state['values']['circle_css_foundation_local']) ? $form_state['values']['circle_css_foundation_local'] : 0;
-  $fn_js_checked = isset($form_state['values']['circle_js_foundation_local']) ? $form_state['values']['circle_js_foundation_local'] : 0;
-  $bs_css_checked = isset($form_state['values']['circle_css_bootstrap_local']) ? $form_state['values']['circle_css_bootstrap_local'] : 0;
-  $bs_js_checked = isset($form_state['values']['circle_js_bootstrap_local']) ? $form_state['values']['circle_js_bootstrap_local'] : 0;
-  $modernizer_checked = isset($form_state['values']['circle_modernizr_local']) ? $form_state['values']['circle_modernizr_local'] : 0;
-  // Check if any library is enabled.
-  $any_library_checked = $fn_css_checked || $fn_js_checked || $bs_css_checked || $bs_js_checked || $modernizer_checked;
+  $checks = array();
+  $checks['fn_css'] = isset($form_state['values']['circle_css_foundation_local']) ? $form_state['values']['circle_css_foundation_local'] : 0;
+  $checks['fn_js'] = isset($form_state['values']['circle_js_foundation_local']) ? $form_state['values']['circle_js_foundation_local'] : 0;
+  $checks['fn5_css'] = isset($form_state['values']['circle_css_foundation5_local']) ? $form_state['values']['circle_css_foundation5_local'] : 0;
+  $checks['fn5_js'] = isset($form_state['values']['circle_js_foundation5_local']) ? $form_state['values']['circle_js_foundation5_local'] : 0;
+  $checks['bs_css'] = isset($form_state['values']['circle_css_bootstrap_local']) ? $form_state['values']['circle_css_bootstrap_local'] : 0;
+  $checks['bs_js'] = isset($form_state['values']['circle_js_bootstrap_local']) ? $form_state['values']['circle_js_bootstrap_local'] : 0;
+  $checks['modernizer'] = isset($form_state['values']['circle_modernizr_local']) ? $form_state['values']['circle_modernizr_local'] : 0;
+  $checks['html_shiv'] = isset($form_state['values']['circle_js_htmlshiv_local']) ? $form_state['values']['circle_js_htmlshiv_local'] : 0;
+
+  // Check if any library was enabled.
+  $any_library_checked = FALSE;
+  foreach ($checks as $check) {
+    if ($check) {
+      $any_library_checked = TRUE;
+      break;
+    }
+  }
   $libraries_exists = module_exists('libraries');
 
   if ($any_library_checked && $libraries_exists) {
     // Modernizr library check.
-    if ($modernizer_checked && !libraries_get_path('modernizr')) {
+    if ($checks['modernizer'] && !libraries_get_path('modernizr')) {
       form_set_error('circle_modernizr_local', t('Please download Modernizr and insert it into sites/all/libraries/modernizr first, to use it locally.'));
     }
     // Foundation library check.
-    if (($fn_css_checked || $fn_js_checked) && !libraries_get_path('foundation')) {
-      form_set_error('circle_css_foundation_local', t('Please download Foundation and insert it into sites/all/libraries/foundation first, to use it locally.'));
+    if (($checks['fn_css'] || $checks['fn_js']) && !libraries_get_path('foundation')) {
+      form_set_error('circle_css_foundation_local', t('Please download Foundation 4 and insert it into sites/all/libraries/foundation first, to use it locally.'));
     }
-    if (($bs_css_checked || $bs_js_checked) && !libraries_get_path('bootstrap')) {
+    if (($checks['fn5_css'] || $checks['fn5_js']) && !libraries_get_path('foundation5')) {
+      form_set_error('circle_css_foundation5_local', t('Please download Foundation 5 and insert it into sites/all/libraries/foundation5 first, to use it locally.'));
+    }
+    if (($checks['bs_css'] || $checks['bs_js']) && !libraries_get_path('bootstrap')) {
       form_set_error('circle_css_bootstrap_local', t('Please download Bootstrap and insert it into sites/all/libraries/bootstrap first, to use it locally.'));
+    }
+    if (($checks['modernizer']) && !libraries_get_path('modernizr')) {
+      form_set_error('circle_modernizr_local', t('Please download Modernizr and insert it into sites/all/libraries/modernizr first, to use it locally.'));
+    }
+    if (($checks['html_shiv']) && !libraries_get_path('htmlshiv')) {
+      form_set_error('circle_js_htmlshiv_local', t('Please download html5shiv and insert it into sites/all/libraries/htmlshiv first, to use it locally.'));
     }
   }
   elseif ($any_library_checked && !$libraries_exists) {
