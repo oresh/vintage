@@ -30,32 +30,7 @@ body {
 
 
 /*  -------  user-register-form  ------  */
-.user-info-from-cookie.user-register-form, .not-logged-in.page-user, .user-pass {
-	.pane-pane-messages {
-		padding: 10px;
-		margin-top: 20px;
-		border-bottom: 1px solid #f0f0f0;
-		.tabs.primary li {
-			list-style: none;
-			display: block;
-			padding: 5px 0;
-			a {
-				color: #222222;
-				text-decoration: none;
-				font-family: 'open sans', sans-serif;
-				font-size: 16px;
-				transition: 250ms linear all;
-				&:hover{
-					opacity: 0.7; 
-				}
-			}
-		}
-	}
-	h2 {
-		font-size: 30px;
-		text-align: center;
-		margin: 60px auto 50px;
-	}
+.pane-page-content form {
 	.form-required {
 		margin-bottom: 35px;
 	}
@@ -92,61 +67,59 @@ body {
 		clear: right;
 	}
 }
-.form-actions.form-wrapper {
-	.form-submit {
-		color: #fff;
-		text-decoration: none;
-		font-family: 'open sans', sans-serif;
-		font-size: 16px;
-		font-weight: normal;
-		display: inline-block;
-		width: auto;
-		padding: 20px 25px !important;
-		background-color: #37353b;
-		line-height: 0;
-		margin: 20px 0 0 510px;
-		transition: 300ms linear all;
-		&:hover {
-			opacity: .8;
+
+.pane-pane-messages {
+	padding: 10px;
+	margin-top: 20px;
+	border-bottom: 1px solid #f0f0f0;
+	.tabs.primary li {
+		list-style: none;
+		display: block;
+		padding: 5px 0;
+		a {
+			color: #222222;
+			text-decoration: none;
+			font-family: 'open sans', sans-serif;
+			font-size: 16px;
+			transition: 250ms linear all;
+			&:hover{
+				opacity: 0.7; 
+			}
 		}
 	}
 }
-.user-pass {
+
+.not-logged-in.page-user {
+	h2 {
+		font-size: 30px;
+		text-align: center;
+		margin: 60px auto 50px;
+	}
 	.form-actions.form-wrapper {
 		.form-submit {
-			margin-top: 0;
+			color: #fff;
+			text-decoration: none;
+			font-family: 'open sans', sans-serif;
+			font-size: 16px;
+			font-weight: normal;
+			display: inline-block;
+			width: auto;
+			padding: 20px 25px !important;
+			background-color: #37353b;
+			line-height: 0;
+			margin: 20px 0 0 510px;
+			transition: 300ms linear all;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+	.user-pass {
+		.form-actions.form-wrapper {
+			.form-submit {
+				margin-top: 0;
+			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
