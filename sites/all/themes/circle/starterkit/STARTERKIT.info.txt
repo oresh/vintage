@@ -42,6 +42,8 @@ settings[circle_js_foundation_version] = 4.3.2
 ; - Libraries
 settings[circle_css_foundation_local] = 0
 settings[circle_js_foundation_local] = 0
+settings[circle_css_foundation5_local] = 0
+settings[circle_js_foundation5_local] = 0
 settings[circle_css_bootstrap_local] = 0
 settings[circle_js_bootstrap_local] = 0
 settings[circle_modernizr_local] = 0
