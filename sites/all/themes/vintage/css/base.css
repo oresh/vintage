@@ -1077,6 +1077,47 @@ tr.selected td {
 body {
   background: #f7f7f7; }
 
+.panel-pane.pane-pane-header .logo-wrapper {
+  background-color: #37363b;
+  color: #c1bcb5;
+  padding: 35px 0;
+  width: 100%;
+  max-height: 90px; }
+  .panel-pane.pane-pane-header .logo-wrapper:after {
+    content: " 1 ";
+    text-indent: -9999px;
+    height: 90px;
+    background-color: #37363b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%; }
+  .panel-pane.pane-pane-header .logo-wrapper:before {
+    content: " 1 ";
+    text-indent: -9999px;
+    height: 90px;
+    background-color: #37363b;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%; }
+  .panel-pane.pane-pane-header .logo-wrapper a > img {
+    display: none; }
+  .panel-pane.pane-pane-header .logo-wrapper .name-and-slogan strong a {
+    display: inline-block;
+    font-family: 'brandon_g_bold', sans-serif;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999;
+    position: relative;
+    transition: 300ms linear all; }
+    .panel-pane.pane-pane-header .logo-wrapper .name-and-slogan strong a:hover {
+      opacity: 0.85; }
+
 /*  -------  user-register-form  ------  */
 .user-info-from-cookie.user-register-form .pane-pane-messages, .not-logged-in.page-user .pane-pane-messages, .user-pass .pane-pane-messages {
   padding: 10px;
@@ -1148,5 +1189,196 @@ body {
 
 .user-pass .form-actions.form-wrapper .form-submit {
   margin-top: 0; }
+
+/*  -------  user-account-form  ------  */
+.logged-in.page-user .panel-pane.pane-pane-messages {
+  margin-top: 40px; }
+  .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px; }
+    .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary li {
+      display: block;
+      list-style: none outside none;
+      padding: 5px 0; }
+      .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary li a {
+        color: #222222;
+        font-family: "open sans",sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all 250ms linear 0s; }
+    .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary .active {
+      color: red; }
+
+.page-user-edit .user-profile-form #edit-account {
+  border-bottom: 1px dashed #f0f0f0;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  margin-top: 20px; }
+  .page-user-edit .user-profile-form #edit-account > div {
+    overflow: hidden;
+    margin-bottom: 30px; }
+  .page-user-edit .user-profile-form #edit-account .password-field.password-parent {
+    margin-bottom: 30px; }
+  .page-user-edit .user-profile-form #edit-account label {
+    color: #222222;
+    text-decoration: none;
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 8px; }
+  .page-user-edit .user-profile-form #edit-account input {
+    width: 470px;
+    height: 40px;
+    border: 1px solid #f0f0f0;
+    outline: none;
+    padding-left: 10px;
+    float: right;
+    right: 380px;
+    position: relative;
+    display: inline-block; }
+  .page-user-edit .user-profile-form #edit-account small {
+    float: right;
+    color: #555555;
+    width: 30%;
+    font-size: 11px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    font-family: 'open sans', sans-serif;
+    margin-top: -42px;
+    display: inline-block;
+    clear: right; }
+.page-user-edit .user-profile-form #edit-picture {
+  border: 0;
+  margin-top: 50px;
+  padding: 0; }
+  .page-user-edit .user-profile-form #edit-picture legend span {
+    color: #777777;
+    font-family: "open sans", sans-serif; }
+  .page-user-edit .user-profile-form #edit-picture .form-item-files-picture-upload label {
+    color: #222222;
+    text-decoration: none;
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 15px;
+    margin-top: 10px; }
+  .page-user-edit .user-profile-form #edit-picture .form-item-files-picture-upload input {
+    margin: 5px 0 0 15px;
+    font-size: 12px;
+    font-family: "open sans", sans-serif; }
+  .page-user-edit .user-profile-form #edit-picture .form-item-files-picture-upload small {
+    font-size: 11px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    font-family: 'open sans', sans-serif;
+    margin-left: 30px;
+    color: red; }
+.page-user-edit .user-profile-form #edit-field-first-second-name {
+  margin: 25px 0 0 0;
+  padding: 0 0 50px 15px;
+  border-bottom: 1px dashed #f0f0f0; }
+  .page-user-edit .user-profile-form #edit-field-first-second-name label {
+    color: #222222;
+    text-decoration: none;
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 8px; }
+  .page-user-edit .user-profile-form #edit-field-first-second-name input {
+    width: 470px;
+    height: 40px;
+    border: 1px solid #f0f0f0;
+    outline: none;
+    padding-left: 10px;
+    float: right;
+    right: 380px;
+    position: relative;
+    display: inline-block; }
+.page-user-edit .user-profile-form #edit-timezone {
+  border: 0;
+  margin-top: 50px;
+  padding: 0; }
+  .page-user-edit .user-profile-form #edit-timezone legend span {
+    padding: 0; }
+    .page-user-edit .user-profile-form #edit-timezone legend span a {
+      color: #777777;
+      font-family: "open sans", sans-serif; }
+  .page-user-edit .user-profile-form #edit-timezone .form-item-timezone {
+    padding-left: 15px; }
+    .page-user-edit .user-profile-form #edit-timezone .form-item-timezone label {
+      color: #222222;
+      text-decoration: none;
+      font-family: 'open sans', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 8px; }
+    .page-user-edit .user-profile-form #edit-timezone .form-item-timezone select {
+      width: 470px;
+      height: 40px;
+      border: 1px solid #f0f0f0;
+      outline: none;
+      padding-left: 10px;
+      float: right;
+      right: 380px;
+      position: relative;
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 0;
+      font-family: "open sans", sans-serif; }
+    .page-user-edit .user-profile-form #edit-timezone .form-item-timezone small {
+      float: right;
+      color: #555555;
+      width: 30%;
+      font-size: 11px;
+      font-weight: lighter;
+      letter-spacing: .5px;
+      font-family: 'open sans', sans-serif;
+      margin-top: -36px;
+      display: inline-block;
+      clear: right; }
+.page-user-edit .user-profile-form #edit-field-phone-number {
+  margin: 30px 0 0 15px; }
+  .page-user-edit .user-profile-form #edit-field-phone-number label {
+    color: #222222;
+    text-decoration: none;
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 8px; }
+  .page-user-edit .user-profile-form #edit-field-phone-number input {
+    width: 470px;
+    height: 40px;
+    border: 1px solid #f0f0f0;
+    outline: none;
+    padding-left: 10px;
+    float: right;
+    right: 380px;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 0; }
+.page-user-edit .user-profile-form .form-actions.form-wrapper {
+  width: 100%;
+  display: block;
+  clear: both;
+  margin: 30px 0 0 0;
+  padding-bottom: 10px;
+  overflow: hidden; }
+  .page-user-edit .user-profile-form .form-actions.form-wrapper .form-submit {
+    float: right;
+    margin-right: 0;
+    border: 0; }
+
+/*  -------  header-user-form  ------  */
+.logged-in.page-user .panel-pane.pane-page-content {
+  margin-top: 30px; }
+  .logged-in.page-user .panel-pane.pane-page-content .pane-title {
+    font-family: "open sans", sans-serif; }
+  .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-title {
+    display: none; }
+  .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-user-profile .profile h3 {
+    font-family: "open sans", sans-serif; }
+    .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-user-profile .profile h3 dl dt {
+      font-family: "open sans", sans-serif !important; }
 
 /*# sourceMappingURL=base.css.map */
