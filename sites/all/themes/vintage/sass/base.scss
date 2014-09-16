@@ -242,6 +242,9 @@ body {
 				margin-top: -42px;
 				display: inline-block;
 				clear: right;
+				.password-strength {
+					margin-left: 150px;
+				}
 			}
 		}
 		#edit-picture {
@@ -393,23 +396,119 @@ body {
 
 
 /*  -------  header-user-form  ------  */
+
 .logged-in.page-user {
-	.panel-pane.pane-page-content {
-		margin-top: 30px;
-		.pane-title {
+	.pane-page-content {
+		h2 {
 			font-family: "open sans", sans-serif;
+			font-weight: normal;
+			margin-top: 40px;
 		}
-		.pane-content {
-			.pane-title {display: none;}
-			.pane-user-profile {
-				.profile h3 {
+		.pane-user-profile {
+			h2 {display: none;}
+			h3 {
+				font-family: "open sans", sans-serif;
+			}
+			dl {
+				font-family: "open sans", sans-serif !important;
+				dt {
+					margin-top: 10px;
 					font-family: "open sans", sans-serif;
-					dl dt {
-						font-family: "open sans", sans-serif !important;
+				}
+				a {
+					color: #222222;
+					text-decoration: none;
+					transition: 300ms linear all;
+					&:hover {
+						color: #777777;
+					}
+				}
+			}
+		}
+		.view-content {
+			.views-row {
+				width: 33%;
+				float: left;
+				border: 1px solid red;
+				overflow: hidden;
+				margin-right: 10px;
+				.views-field-field-pictures {
+					height: 250px;
+					max-width: 100%;
+					img {
+						max-width: 100%;
+						max-height: 100%;
+						display: block;
+						margin: 0 auto;
+					}
+				}
+				.views-field-title a {
+					font-family: "open sans", sans-serif;
+					color: #222222;
+					text-decoration: none;
+					font-size: 16px;
+					transition: 250ms linear all;
+					padding: 15px 0 10px 0;
+					display: block;
+					&:hover {
+						color: #777777;
+					}
+				}
+				.views-field-field-pict-status {
+					font-family: "open sans", sans-serif;
+
+				}
+			}
+		}
+	}
+}
+
+.node-type-painting {
+	font-family: "open sans", sans-serif;
+	.pane-title {
+		font-family: "open sans", sans-serif;
+		font-weight: normal;
+		margin-bottom: 20px;
+	}
+	.node-painting.clearfix {
+		font-family: "open sans", sans-serif;
+		.field-label-above {
+			font-weight: "open sans", sans-serif;
+			margin-top: 15px;
+			> div:last-child {
+				margin: 5px 0 0 10px;
+				a {
+					color: #777777;
+					text-decoration: none;
+					transition: 300ms linear all;
+					&:hover {
+						color: #000;
 					}
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

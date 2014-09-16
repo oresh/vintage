@@ -1247,6 +1247,8 @@ body {
     margin-top: -42px;
     display: inline-block;
     clear: right; }
+    .page-user-edit .user-profile-form #edit-account small .password-strength {
+      margin-left: 150px; }
 .page-user-edit .user-profile-form #edit-picture {
   border: 0;
   margin-top: 50px;
@@ -1370,15 +1372,70 @@ body {
     border: 0; }
 
 /*  -------  header-user-form  ------  */
-.logged-in.page-user .panel-pane.pane-page-content {
-  margin-top: 30px; }
-  .logged-in.page-user .panel-pane.pane-page-content .pane-title {
+.logged-in.page-user .pane-page-content h2 {
+  font-family: "open sans", sans-serif;
+  font-weight: normal;
+  margin-top: 40px; }
+.logged-in.page-user .pane-page-content .pane-user-profile h2 {
+  display: none; }
+.logged-in.page-user .pane-page-content .pane-user-profile h3 {
+  font-family: "open sans", sans-serif; }
+.logged-in.page-user .pane-page-content .pane-user-profile dl {
+  font-family: "open sans", sans-serif !important; }
+  .logged-in.page-user .pane-page-content .pane-user-profile dl dt {
+    margin-top: 10px;
     font-family: "open sans", sans-serif; }
-  .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-title {
-    display: none; }
-  .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-user-profile .profile h3 {
+  .logged-in.page-user .pane-page-content .pane-user-profile dl a {
+    color: #222222;
+    text-decoration: none;
+    transition: 300ms linear all; }
+    .logged-in.page-user .pane-page-content .pane-user-profile dl a:hover {
+      color: #777777; }
+.logged-in.page-user .pane-page-content .view-content .views-row {
+  width: 33%;
+  float: left;
+  border: 1px solid red;
+  overflow: hidden;
+  margin-right: 10px; }
+  .logged-in.page-user .pane-page-content .view-content .views-row .views-field-field-pictures {
+    height: 250px;
+    max-width: 100%; }
+    .logged-in.page-user .pane-page-content .view-content .views-row .views-field-field-pictures img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: 0 auto; }
+  .logged-in.page-user .pane-page-content .view-content .views-row .views-field-title a {
+    font-family: "open sans", sans-serif;
+    color: #222222;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 250ms linear all;
+    padding: 15px 0 10px 0;
+    display: block; }
+    .logged-in.page-user .pane-page-content .view-content .views-row .views-field-title a:hover {
+      color: #777777; }
+  .logged-in.page-user .pane-page-content .view-content .views-row .views-field-field-pict-status {
     font-family: "open sans", sans-serif; }
-    .logged-in.page-user .panel-pane.pane-page-content .pane-content .pane-user-profile .profile h3 dl dt {
-      font-family: "open sans", sans-serif !important; }
+
+.node-type-painting {
+  font-family: "open sans", sans-serif; }
+  .node-type-painting .pane-title {
+    font-family: "open sans", sans-serif;
+    font-weight: normal;
+    margin-bottom: 20px; }
+  .node-type-painting .node-painting.clearfix {
+    font-family: "open sans", sans-serif; }
+    .node-type-painting .node-painting.clearfix .field-label-above {
+      font-weight: "open sans", sans-serif;
+      margin-top: 15px; }
+      .node-type-painting .node-painting.clearfix .field-label-above > div:last-child {
+        margin: 5px 0 0 10px; }
+        .node-type-painting .node-painting.clearfix .field-label-above > div:last-child a {
+          color: #777777;
+          text-decoration: none;
+          transition: 300ms linear all; }
+          .node-type-painting .node-painting.clearfix .field-label-above > div:last-child a:hover {
+            color: #000; }
 
 /*# sourceMappingURL=base.css.map */
