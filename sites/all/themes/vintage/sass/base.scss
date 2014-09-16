@@ -18,6 +18,11 @@
 // Optionally, add your own components here.
 @import "print";
 
+// Skeleton style
+@import "components/skeletonbase";
+@import "components/skeletonlayout";
+@import "components/skeletonflexslider";
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
@@ -242,7 +247,7 @@ body {
 				margin-top: -42px;
 				display: inline-block;
 				clear: right;
-				.password-strength {
+				.password-strength  {
 					margin-left: 150px;
 				}
 			}
@@ -489,26 +494,3 @@ body {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
