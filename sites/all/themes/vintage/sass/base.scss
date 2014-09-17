@@ -28,6 +28,24 @@
 /* @import "theme-B"; */
 
 
+// General style 
+@mixin sans-regular() {
+	font-family: "open sans", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color: #222;
+	text-decoration: none;
+}
+@mixin sans-light() {
+	font-family: "open sans", sans-serif;
+	font-weight: lighter;
+	color: #222;
+	text-decoration: none;
+}
+@mixin font() {
+	font-family: "open sans", sans-serif;
+}
+
 
 /*  -------  header-user-form  ------  */
 body {
@@ -37,30 +55,10 @@ body {
 .panel-pane.pane-pane-header {
 	.logo-wrapper {
 		background-color: #37363b;
-	    color: #c1bcb5;
-	    padding: 35px 0;
-	    width: 100%;
-	    max-height: 90px;
-	    &:after {
-	    	content: " 1 ";
-	    	text-indent: -9999px;
-	    	height: 90px;
-	    	background-color: #37363b;
-	    	position: absolute;
-	    	left: 0;
-	    	top: 0;
-	    	width: 20%;
-	    }
-	    &:before {
-	    	content: " 1 ";
-	    	text-indent: -9999px;
-	    	height: 90px;
-	    	background-color: #37363b;
-	    	position: absolute;
-	    	right: 0;
-	    	top: 0;
-	    	width: 20%;
-	    }
+	   color: #c1bcb5;
+	   padding: 35px 0;
+	   width: 100%;
+	   max-height: 90px;
 		a > img {
 			display: none;
 		} 
@@ -90,16 +88,15 @@ body {
 		margin-bottom: 35px;
 	}
 	label {
-		color: #222222;
-		text-decoration: none;
-		font-family: 'open sans', sans-serif;
+		@include sans-regular();
 		font-size: 16px;
-		font-weight: normal;
 		margin-left: 90px;
 		margin-top: 8px;
+		float: left;
 	}
-	input {
-		width: 470px;
+	input, select {
+		width: 100%;
+		max-width: 470px;
 		height: 40px;
 		border: 1px solid #f0f0f0;
 		outline: none;
@@ -108,15 +105,15 @@ body {
 		right: 380px;
 		position: relative;
 		display: inline-block;
+		background-color: #fff;
+		@include sans-regular();
 	}
 	small {
 		float: right;
-		color: #555555;
 		width: 30%;
 		font-size: 11px;
-		font-weight: lighter;
 		letter-spacing: .5px;
-		font-family: 'open sans', sans-serif;
+		@include sans-light();
 		margin-top: -42px;
 		display: inline-block;
 		clear: right;
@@ -132,9 +129,7 @@ body {
 		display: block;
 		padding: 5px 0;
 		a {
-			color: #222222;
-			text-decoration: none;
-			font-family: 'open sans', sans-serif;
+			@include sans-regular();
 			font-size: 16px;
 			transition: 250ms linear all;
 			&:hover{
@@ -152,9 +147,8 @@ body {
 	}
 	.form-actions.form-wrapper {
 		.form-submit {
+			@include sans-regular();
 			color: #fff;
-			text-decoration: none;
-			font-family: 'open sans', sans-serif;
 			font-size: 16px;
 			font-weight: normal;
 			display: inline-block;
@@ -183,18 +177,16 @@ body {
 	.panel-pane.pane-pane-messages {
 		margin-top: 40px;
 		.tabs.primary {
-			border-bottom: 1px solid #f0f0f0;
 			padding-bottom: 20px;
 			li {
 				display: block;
 			    list-style: none outside none;
 			    padding: 5px 0;
 				a {
-					color: #222222;
-				    font-family: "open sans",sans-serif;
-				    font-size: 20px;
-				    text-decoration: none;
-				    transition: all 250ms linear 0s;
+					@include sans-regular();
+				   font-size: 20px;
+				   text-decoration: none;
+				   transition: all 250ms linear 0s;
 				}
 			}
 			.active {
@@ -203,110 +195,77 @@ body {
 		}
 	}
 }
-.page-user-edit {
-	.user-profile-form {
+
+.page-user-edit{
 		#edit-account {
-			border-bottom: 1px dashed #f0f0f0;
 			padding-bottom: 20px;
 			padding-left: 15px;
-			margin-top: 20px;
+			margin-top: 40px;
+			border-bottom: 1px dashed #f0f0f0;
 			> div {
 				overflow: hidden;
-				margin-bottom: 30px;
+				margin-bottom: 40px;
 			}
-			.password-field.password-parent {
-				margin-bottom: 30px;
+			.form-item-mail {
+				small {margin-top: -65px;}
 			}
-			label {
-				color: #222222;
-				text-decoration: none;
-				font-family: 'open sans', sans-serif;
-				font-size: 16px;
-				font-weight: normal;
-				margin-top: 8px;
+			.form-type-password {
+				overflow: hidden;
+				.password-strength, .password-confirm{
+					margin-left: 90px;
+					@include sans-light();
+				}
 			}
-			input {
-				width: 470px;
-				height: 40px;
-				border: 1px solid #f0f0f0;
-				outline: none;
-				padding-left: 10px;
-				float: right;
-				right: 380px;
-				position: relative;
-				display: inline-block;
+			.password-suggestions {
+				margin: 15px 0 0 90px;
+				@include sans-light();
 			}
-			small {
-				float: right;
-				color: #555555;
-				width: 30%;
-				font-size: 11px;
-				font-weight: lighter;
-				letter-spacing: .5px;
-				font-family: 'open sans', sans-serif;
-				margin-top: -42px;
-				display: inline-block;
-				clear: right;
-				.password-strength  {
-					margin-left: 150px;
+			.form-item-pass {
+				.form-item-pass-pass2 {
+					margin-top: 30px;
+					label {
+						margin-top: 15px;
+					}
 				}
 			}
 		}
 		#edit-picture {
 			border: 0;
 			margin-top: 50px;
-			padding: 0;
+			padding: 0	;
 			legend span {
+				@include sans-regular();
 				color: #777777;
-				font-family: "open sans", sans-serif;
+				font-size: 30px;
 			}
 			.form-item-files-picture-upload {
+				margin-top: 25px;
 				label {
-					color: #222222;
-					text-decoration: none;
-					font-family: 'open sans', sans-serif;
-					font-size: 16px;
-					font-weight: normal;
-					margin-left: 15px;
+					margin-left: 105px;
 					margin-top: 10px;
 				}
 				input {
-					margin: 5px 0 0 15px;
+					margin: 10px 0 0 15px;
 					font-size: 12px;
-					font-family: "open sans", sans-serif;
+					max-width: auto;
+					background-color: #f7f7f7;
+					border: none;
+					height: 20px;
 				}
 				small {
-					font-size: 11px;
-					font-weight: lighter;
 					letter-spacing: .5px;
-					font-family: 'open sans', sans-serif;
 					margin-left: 30px;
-					color: red;
 				}
 			}
 		}
 		#edit-field-first-second-name {
 			margin: 25px 0 0 0;
-			padding: 0 0 50px 15px;
+			padding: 0 0 100px 15px;
 			border-bottom: 1px dashed #f0f0f0;
 			label {
-				color: #222222;
-				text-decoration: none;
-				font-family: 'open sans', sans-serif;
+				@include sans-regular();
 				font-size: 16px;
-				font-weight: normal;
 				margin-top: 8px;
-			}
-			input {
-				width: 470px;
-				height: 40px;
-				border: 1px solid #f0f0f0;
-				outline: none;
-				padding-left: 10px;
-				float: right;
-				right: 380px;
-				position: relative;
-				display: inline-block;
 			}
 		}
 		#edit-timezone {
@@ -316,71 +275,18 @@ body {
 			legend span {
 				padding: 0;
 				a {
+					@include sans-regular();
+					font-size: 30px;
 					color: #777777;
-					font-family: "open sans", sans-serif;
 				}
 			}
 			.form-item-timezone {
 				padding-left: 15px;
-				label {
-					color: #222222;
-					text-decoration: none;
-					font-family: 'open sans', sans-serif;
-					font-size: 16px;
-					font-weight: normal;
-					margin-top: 8px;
-				}
-				select {
-					width: 470px;
-					height: 40px;
-					border: 1px solid #f0f0f0;
-					outline: none;
-					padding-left: 10px;
-					float: right;
-					right: 380px;
-					position: relative;
-					display: inline-block;
-					background-color: #fff;
-					border-radius: 0;
-					font-family: "open sans", sans-serif;
-				}
-				small {
-					float: right;
-					color: #555555;
-					width: 30%;
-					font-size: 11px;
-					font-weight: lighter;
-					letter-spacing: .5px;
-					font-family: 'open sans', sans-serif;
-					margin-top: -36px;
-					display: inline-block;
-					clear: right;
-				}
+				margin-top: 25px;
 			}
 		}
 		#edit-field-phone-number {
 			margin: 30px 0 0 15px;
-			label {
-				color: #222222;
-				text-decoration: none;
-				font-family: 'open sans', sans-serif;
-				font-size: 16px;
-				font-weight: normal;
-				margin-top: 8px;
-			}
-			input {
-				width: 470px;
-				height: 40px;
-				border: 1px solid #f0f0f0;
-				outline: none;
-				padding-left: 10px;
-				float: right;
-				right: 380px;
-				position: relative;
-				display: inline-block;
-				background-color: #fff;
-				border-radius: 0;
-			}
 		}
 		.form-actions.form-wrapper {
 			width: 100%;
@@ -393,9 +299,18 @@ body {
 				float: right;
 				margin-right: 0;
 				border: 0;
+				border-radius: 0;
+				background-color: #999;
+				width: auto;
+				padding: 15px 20px;
+				line-height: 12px;
+				transition: 250ms linear all;
+				&:hover {
+					background-color: #555;
+					color: #fff;
+				}
 			}
 		}
-	}
 }
 
 
@@ -405,20 +320,19 @@ body {
 .logged-in.page-user {
 	.pane-page-content {
 		h2 {
-			font-family: "open sans", sans-serif;
-			font-weight: normal;
+			@include sans-regular();
 			margin-top: 40px;
 		}
 		.pane-user-profile {
 			h2 {display: none;}
 			h3 {
-				font-family: "open sans", sans-serif;
+				@include font();
 			}
 			dl {
-				font-family: "open sans", sans-serif !important;
+				@include font();
 				dt {
 					margin-top: 10px;
-					font-family: "open sans", sans-serif;
+					@include font();
 				}
 				a {
 					color: #222222;
@@ -432,11 +346,10 @@ body {
 		}
 		.view-content {
 			.views-row {
-				width: 33%;
+				width: 32%;
 				float: left;
-				border: 1px solid red;
 				overflow: hidden;
-				margin-right: 10px;
+				margin: 10px 10px 0 0;
 				.views-field-field-pictures {
 					height: 250px;
 					max-width: 100%;
@@ -448,9 +361,7 @@ body {
 					}
 				}
 				.views-field-title a {
-					font-family: "open sans", sans-serif;
-					color: #222222;
-					text-decoration: none;
+					@include sans-regular();
 					font-size: 16px;
 					transition: 250ms linear all;
 					padding: 15px 0 10px 0;
@@ -460,8 +371,7 @@ body {
 					}
 				}
 				.views-field-field-pict-status {
-					font-family: "open sans", sans-serif;
-
+					@include font();
 				}
 			}
 		}
@@ -469,16 +379,15 @@ body {
 }
 
 .node-type-painting {
-	font-family: "open sans", sans-serif;
+	@include font();
 	.pane-title {
-		font-family: "open sans", sans-serif;
-		font-weight: normal;
+		@include sans-regular();
 		margin-bottom: 20px;
 	}
 	.node-painting.clearfix {
-		font-family: "open sans", sans-serif;
+		@include font();
 		.field-label-above {
-			font-weight: "open sans", sans-serif;
+			@include font();
 			margin-top: 15px;
 			> div:last-child {
 				margin: 5px 0 0 10px;
