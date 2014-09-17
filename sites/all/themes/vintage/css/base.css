@@ -3715,32 +3715,34 @@ html[xmlns] .slides {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-/*  -------  header-user-form  ------  */
 body {
   background: #f7f7f7; }
 
-.panel-pane.pane-pane-header .logo-wrapper {
+/*  -------  header-user-form  ------  */
+.panel-pane.pane-custom.pane-1 {
+  display: none; }
+
+.pane-page-site-name {
   background-color: #37363b;
   color: #c1bcb5;
   padding: 35px 0;
   width: 100%;
   max-height: 90px; }
-  .panel-pane.pane-pane-header .logo-wrapper a > img {
-    display: none; }
-  .panel-pane.pane-pane-header .logo-wrapper .name-and-slogan strong a {
-    display: inline-block;
+  .pane-page-site-name .pane-content {
+    display: block;
     font-family: 'brandon_g_bold', sans-serif;
     font-size: 24px;
     line-height: 100%;
-    margin: 0;
+    margin: 0 auto;
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
     z-index: 9999;
     position: relative;
-    transition: 300ms linear all; }
-    .panel-pane.pane-pane-header .logo-wrapper .name-and-slogan strong a:hover {
-      opacity: 0.85; }
+    transition: 300ms linear all;
+    max-width: 1160px;
+    width: 100%;
+    cursor: pointer; }
 
 /*  -------  user-register-form  ------  */
 .pane-page-content form .form-required {

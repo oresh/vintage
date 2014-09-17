@@ -46,38 +46,36 @@
 	font-family: "open sans", sans-serif;
 }
 
-
-/*  -------  header-user-form  ------  */
+// Body general styles
 body {
 	background: #f7f7f7;
 }
 
-.panel-pane.pane-pane-header {
-	.logo-wrapper {
-		background-color: #37363b;
-	   color: #c1bcb5;
-	   padding: 35px 0;
-	   width: 100%;
-	   max-height: 90px;
-		a > img {
-			display: none;
-		} 
-		.name-and-slogan strong a {
-			display: inline-block;
-			font-family: 'brandon_g_bold', sans-serif;
-			font-size: 24px;
-			line-height: 100%;
-			margin: 0;
-			text-transform: uppercase;
-			color: #fff;
-			text-decoration: none;
-			z-index: 9999;
-			position: relative;
-			transition: 300ms linear all;
-			&:hover {
-				opacity: 0.85;
-			}
-		}
+/*  -------  header-user-form  ------  */
+.panel-pane.pane-custom.pane-1 {
+	display: none;
+}
+.pane-page-site-name {
+	background-color: #37363b;
+   color: #c1bcb5;
+   padding: 35px 0;
+   width: 100%;
+   max-height: 90px;
+	.pane-content {
+		display: block;
+		font-family: 'brandon_g_bold', sans-serif;
+		font-size: 24px;
+		line-height: 100%;
+		margin: 0 auto;
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
+		z-index: 9999;
+		position: relative;
+		transition: 300ms linear all;
+		max-width: 1160px;
+		width: 100%;
+		cursor: pointer;
 	}
 }
 
