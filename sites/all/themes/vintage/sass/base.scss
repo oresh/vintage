@@ -53,27 +53,94 @@ body {
 }
 
 /*  -------  header-user-form  ------  */
-.pane-page-site-name {
+.page-header-wrapper {
 	background-color: #37363b;
    color: #c1bcb5;
-   padding: 35px 0;
-   width: 100%;
-   max-height: 90px;
-	.pane-content {
+  	width: 100%;
+   height: 90px;
+	.pane-page-site-name {
 		display: block;
 		font-family: 'brandon_g_bold', sans-serif;
 		font-size: 24px;
 		line-height: 100%;
-		margin: 0 auto;
+		margin: 35px 0 0 0;
 		text-transform: uppercase;
 		color: #fff;
 		text-decoration: none;
 		z-index: 10;
 		position: relative;
 		transition: 300ms linear all;
-		max-width: 1160px;
-		width: 100%;
+		float: left;
 		cursor: pointer;
+	}
+	.pane-custom.pane-1 {
+		float: right;
+		display: inline-block;
+		margin-top: 15px;
+		.pane-content > ul {
+			li {
+				line-height: 18px;
+				margin-bottom: 12px;
+				float: left;
+				& + li:before {
+				    content: " / ";
+				    padding: 0 10px;
+				}
+				&:last-child a:hover {
+				  color: #fff;
+				  border-bottom-color: #817d7b;
+				  padding: 8px 20px;
+				}
+				a {
+					color: #817d7b;
+					text-decoration: none;
+					@include sans-regular();
+					font-size: 18px;
+					transition: all linear 300ms;
+					&:hover {
+						color: #fff;
+					   border-bottom: 1px solid #fff;
+					   padding-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*  -------  footer-user-form  ------  */
+.page-footer-wrapper {
+	height: 160px;
+	width: 100%;
+	overflow: hidden;
+	color: #fff;
+	background: url(../images/bg-footer.png) no-repeat center center;
+	margin-top: 30px;
+	.pane-page-site-name {
+		margin-top: 20px;
+		font-family: 'brandon_g_bold', sans-serif;
+		font-size: 20px;
+		color: #fff;
+	}
+	.pane-menu-menu-footer-menu {
+		float: left;
+		margin-top: 20px;
+		.menu-menu-footer-menu li{
+			margin: 10px;
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+	.pane-custom.pane-2 {
+		float: right;
+		margin-top: 85px;
+		p {
+			@include sans-light();
+			font-size: 14px;
+		}
 	}
 }
 
@@ -85,14 +152,6 @@ body {
 	}
 	.form-item-pass small{
 		margin-top: -45px;
-	}
-	label {
-		@include sans-regular();
-		font-size: 16px;
-		color: #222;
-		margin-left: 90px;
-		margin-top: 8px;
-		float: left;
 	}
 	input[type="text"],
    input[type="email"],
@@ -153,6 +212,14 @@ body {
 		font-size: 30px;
 		text-align: center;
 		margin: 60px auto 50px;
+	}
+	label {
+		@include sans-regular();
+		font-size: 16px;
+		color: #222;
+		margin-left: 90px;
+		margin-top: 8px;
+		float: left;
 	}
 	.form-actions.form-wrapper {
 		.form-submit {
@@ -421,3 +488,42 @@ body {
 		}
 	}
 }
+
+
+/*  -------  header-user-form  ------  */
+.page-gallery {
+	.circle-columns-column {
+		.views-row {
+			@include sans-regular();
+			text-decoration: none;
+			float: left;
+			display: inline-block;
+			.views-field {
+				margin-bottom: 5px;
+			}
+			.views-field-field-pictures {
+				margin-bottom: 10px;
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
