@@ -33,13 +33,11 @@
 	font-family: "open sans", sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	color: #222;
 	text-decoration: none;
 }
 @mixin sans-light() {
 	font-family: "open sans", sans-serif;
-	font-weight: lighter;
-	color: #222;
+	font-weight: 100;
 	text-decoration: none;
 }
 @mixin font() {
@@ -53,6 +51,7 @@ body {
 
 /*  -------  header-user-form  ------  */
 .panel-pane.pane-custom.pane-1 {
+
 }
 .pane-page-site-name {
 	background-color: #37363b;
@@ -69,7 +68,7 @@ body {
 		text-transform: uppercase;
 		color: #fff;
 		text-decoration: none;
-		z-index: 9999;
+		z-index: 10;
 		position: relative;
 		transition: 300ms linear all;
 		max-width: 1160px;
@@ -128,7 +127,7 @@ body {
 		a {
 			@include sans-regular();
 			font-size: 16px;
-			transition: 250ms linear all;
+			transition: opacity .25ms linear;
 			&:hover{
 				opacity: 0.7; 
 			}
@@ -154,7 +153,7 @@ body {
 			background-color: #37353b;
 			line-height: 0;
 			margin: 20px 0 0 510px;
-			transition: 300ms linear all;
+			transition: opacity 0.3s linear;
 			&:hover {
 				opacity: .8;
 			}
@@ -177,7 +176,7 @@ body {
 			padding-bottom: 20px;
 			li {
 				display: block;
-			    list-style: none outside none;
+			    list-style: none;
 			    padding: 5px 0;
 				a {
 					@include sans-regular();
@@ -194,120 +193,120 @@ body {
 }
 
 .page-user-edit{
-		#edit-account {
-			padding-bottom: 20px;
-			padding-left: 15px;
-			margin-top: 40px;
-			border-bottom: 1px dashed #f0f0f0;
-			> div {
-				overflow: hidden;
-				margin-bottom: 40px;
-			}
-			.form-item-mail {
-				small {margin-top: -65px;}
-			}
-			.form-type-password {
-				overflow: hidden;
-				.password-strength, .password-confirm{
-					margin-left: 90px;
-					@include sans-light();
-				}
-			}
-			.password-suggestions {
-				margin: 15px 0 0 90px;
+	#edit-account {
+		padding-bottom: 20px;
+		padding-left: 15px;
+		margin-top: 40px;
+		border-bottom: 1px dashed #f0f0f0;
+		> div {
+			overflow: hidden;
+			margin-bottom: 40px;
+		}
+		.form-item-mail {
+			small {margin-top: -65px;}
+		}
+		.form-type-password {
+			overflow: hidden;
+			.password-strength, .password-confirm{
+				margin-left: 90px;
 				@include sans-light();
 			}
-			.form-item-pass {
-				.form-item-pass-pass2 {
-					margin-top: 30px;
-					label {
-						margin-top: 15px;
-					}
-				}
-			}
 		}
-		#edit-picture {
-			border: 0;
-			margin-top: 50px;
-			padding: 0	;
-			legend span {
-				@include sans-regular();
-				color: #777777;
-				font-size: 30px;
-			}
-			.form-item-files-picture-upload {
-				margin-top: 25px;
+		.password-suggestions {
+			margin: 15px 0 0 90px;
+			@include sans-light();
+		}
+		.form-item-pass {
+			.form-item-pass-pass2 {
+				margin-top: 30px;
 				label {
-					margin-left: 105px;
-					margin-top: 10px;
-				}
-				input {
-					margin: 10px 0 0 15px;
-					font-size: 12px;
-					max-width: auto;
-					background-color: #f7f7f7;
-					border: none;
-					height: 20px;
-				}
-				small {
-					letter-spacing: .5px;
-					margin-left: 30px;
+					margin-top: 15px;
 				}
 			}
 		}
-		#edit-field-first-second-name {
-			margin: 25px 0 0 0;
-			padding: 0 0 100px 15px;
-			border-bottom: 1px dashed #f0f0f0;
-			label {
-				@include sans-regular();
-				font-size: 16px;
-				margin-top: 8px;
-			}
+	}
+	#edit-picture {
+		border: 0;
+		margin-top: 50px;
+		padding: 0	;
+		legend span {
+			@include sans-regular();
+			color: #777777;
+			font-size: 30px;
 		}
-		#edit-timezone {
-			border: 0;
-			margin-top: 50px;
+	}
+	#edit-field-first-second-name {
+		margin: 25px 0 0 0;
+		padding: 0 0 100px 15px;
+		border-bottom: 1px dashed #f0f0f0;
+		label {
+			@include sans-regular();
+			font-size: 16px;
+			margin-top: 8px;
+		}
+	}
+	#edit-timezone {
+		border: 0;
+		margin-top: 50px;
+		padding: 0;
+		legend span {
 			padding: 0;
-			legend span {
-				padding: 0;
-				a {
-					@include sans-regular();
-					font-size: 30px;
-					color: #777777;
-				}
-			}
-			.form-item-timezone {
-				padding-left: 15px;
-				margin-top: 25px;
+			a {
+				@include sans-regular();
+				font-size: 30px;
+				color: #777777;
 			}
 		}
-		#edit-field-phone-number {
-			margin: 30px 0 0 15px;
+		.form-item-timezone {
+			padding-left: 15px;
+			margin-top: 25px;
 		}
-		.form-actions.form-wrapper {
-			width: 100%;
-			display: block;
-			clear: both;
-			margin: 30px 0 0 0;
-			padding-bottom: 10px;
-			overflow: hidden;
-			.form-submit {
-				float: right;
-				margin-right: 0;
-				border: 0;
-				border-radius: 0;
-				background-color: #999;
-				width: auto;
-				padding: 15px 20px;
-				line-height: 12px;
-				transition: 250ms linear all;
-				&:hover {
-					background-color: #555;
-					color: #fff;
-				}
+	}
+	#edit-field-phone-number {
+		margin: 30px 0 0 15px;
+	}
+	.form-actions.form-wrapper {
+		width: 100%;
+		display: block;
+		clear: both;
+		margin: 30px 0 0 0;
+		padding-bottom: 10px;
+		overflow: hidden;
+		.form-submit {
+			float: right;
+			margin-right: 0;
+			border: 0;
+			border-radius: 0;
+			background-color: #999;
+			width: auto;
+			padding: 15px 20px;
+			line-height: 12px;
+			transition: background-color .25s linear, color .25s ease-in;
+			&:hover {
+				background-color: #555;
+				color: #fff;
 			}
 		}
+	}
+}
+.form-item-files-picture-upload {
+	margin-top: 25px;
+	label {
+		margin-left: 105px;
+		margin-top: 10px;
+	}
+	input {
+		margin: 10px 0 0 15px;
+		font-size: 12px;
+		max-width: auto;
+		background-color: #f7f7f7;
+		border: none;
+		height: 20px;
+	}
+	small {
+		letter-spacing: .5px;
+		margin-left: 30px;
+	}
 }
 
 
@@ -321,7 +320,6 @@ body {
 			margin-top: 40px;
 		}
 		.pane-user-profile {
-			h2 {display: none;}
 			h3 {
 				@include font();
 			}
@@ -334,7 +332,7 @@ body {
 				a {
 					color: #222222;
 					text-decoration: none;
-					transition: 300ms linear all;
+					transition: colo .3s linear;
 					&:hover {
 						color: #777777;
 					}
@@ -346,7 +344,7 @@ body {
 				width: 32%;
 				float: left;
 				overflow: hidden;
-				margin: 10px 10px 0 0;
+				margin: 1% 1% 0 0;
 				.views-field-field-pictures {
 					height: 250px;
 					max-width: 100%;
@@ -360,7 +358,7 @@ body {
 				.views-field-title a {
 					@include sans-regular();
 					font-size: 16px;
-					transition: 250ms linear all;
+					transition: color .25s linear;
 					padding: 15px 0 10px 0;
 					display: block;
 					&:hover {
@@ -391,7 +389,7 @@ body {
 				a {
 					color: #777777;
 					text-decoration: none;
-					transition: 300ms linear all;
+					transition: color .3s linear;
 					&:hover {
 						color: #000;
 					}

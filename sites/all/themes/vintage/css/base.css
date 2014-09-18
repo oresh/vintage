@@ -3734,7 +3734,7 @@ body {
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    z-index: 9999;
+    z-index: 10;
     position: relative;
     transition: 300ms linear all;
     max-width: 1160px;
@@ -3748,7 +3748,6 @@ body {
   font-family: "open sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222;
   text-decoration: none;
   font-size: 16px;
   margin-left: 90px;
@@ -3769,7 +3768,6 @@ body {
   font-family: "open sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222;
   text-decoration: none; }
 .pane-page-content form small {
   float: right;
@@ -3777,8 +3775,7 @@ body {
   font-size: 11px;
   letter-spacing: .5px;
   font-family: "open sans", sans-serif;
-  font-weight: lighter;
-  color: #222;
+  font-weight: 100;
   text-decoration: none;
   margin-top: -42px;
   display: inline-block;
@@ -3796,10 +3793,9 @@ body {
       font-family: "open sans", sans-serif;
       font-weight: normal;
       font-style: normal;
-      color: #222;
       text-decoration: none;
       font-size: 16px;
-      transition: 250ms linear all; }
+      transition: opacity .25ms linear; }
       .pane-pane-messages .tabs.primary li a:hover {
         opacity: 0.7; }
 
@@ -3811,7 +3807,6 @@ body {
   font-family: "open sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222;
   text-decoration: none;
   color: #fff;
   font-size: 16px;
@@ -3822,7 +3817,7 @@ body {
   background-color: #37353b;
   line-height: 0;
   margin: 20px 0 0 510px;
-  transition: 300ms linear all; }
+  transition: opacity 0.3s linear; }
   .not-logged-in.page-user .form-actions.form-wrapper .form-submit:hover {
     opacity: .8; }
 .not-logged-in.page-user .user-pass .form-actions.form-wrapper .form-submit {
@@ -3835,13 +3830,12 @@ body {
     padding-bottom: 20px; }
     .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary li {
       display: block;
-      list-style: none outside none;
+      list-style: none;
       padding: 5px 0; }
       .logged-in.page-user .panel-pane.pane-pane-messages .tabs.primary li a {
         font-family: "open sans", sans-serif;
         font-weight: normal;
         font-style: normal;
-        color: #222;
         text-decoration: none;
         font-size: 20px;
         text-decoration: none;
@@ -3864,14 +3858,12 @@ body {
     .page-user-edit #edit-account .form-type-password .password-strength, .page-user-edit #edit-account .form-type-password .password-confirm {
       margin-left: 90px;
       font-family: "open sans", sans-serif;
-      font-weight: lighter;
-      color: #222;
+      font-weight: 100;
       text-decoration: none; }
   .page-user-edit #edit-account .password-suggestions {
     margin: 15px 0 0 90px;
     font-family: "open sans", sans-serif;
-    font-weight: lighter;
-    color: #222;
+    font-weight: 100;
     text-decoration: none; }
   .page-user-edit #edit-account .form-item-pass .form-item-pass-pass2 {
     margin-top: 30px; }
@@ -3885,25 +3877,9 @@ body {
     font-family: "open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: #222;
     text-decoration: none;
     color: #777777;
     font-size: 30px; }
-  .page-user-edit #edit-picture .form-item-files-picture-upload {
-    margin-top: 25px; }
-    .page-user-edit #edit-picture .form-item-files-picture-upload label {
-      margin-left: 105px;
-      margin-top: 10px; }
-    .page-user-edit #edit-picture .form-item-files-picture-upload input {
-      margin: 10px 0 0 15px;
-      font-size: 12px;
-      max-width: auto;
-      background-color: #f7f7f7;
-      border: none;
-      height: 20px; }
-    .page-user-edit #edit-picture .form-item-files-picture-upload small {
-      letter-spacing: .5px;
-      margin-left: 30px; }
 .page-user-edit #edit-field-first-second-name {
   margin: 25px 0 0 0;
   padding: 0 0 100px 15px;
@@ -3912,7 +3888,6 @@ body {
     font-family: "open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: #222;
     text-decoration: none;
     font-size: 16px;
     margin-top: 8px; }
@@ -3926,7 +3901,6 @@ body {
       font-family: "open sans", sans-serif;
       font-weight: normal;
       font-style: normal;
-      color: #222;
       text-decoration: none;
       font-size: 30px;
       color: #777777; }
@@ -3951,21 +3925,34 @@ body {
     width: auto;
     padding: 15px 20px;
     line-height: 12px;
-    transition: 250ms linear all; }
+    transition: background-color .25s linear, color .25s ease-in; }
     .page-user-edit .form-actions.form-wrapper .form-submit:hover {
       background-color: #555;
       color: #fff; }
+
+.form-item-files-picture-upload {
+  margin-top: 25px; }
+  .form-item-files-picture-upload label {
+    margin-left: 105px;
+    margin-top: 10px; }
+  .form-item-files-picture-upload input {
+    margin: 10px 0 0 15px;
+    font-size: 12px;
+    max-width: auto;
+    background-color: #f7f7f7;
+    border: none;
+    height: 20px; }
+  .form-item-files-picture-upload small {
+    letter-spacing: .5px;
+    margin-left: 30px; }
 
 /*  -------  header-user-form  ------  */
 .logged-in.page-user .pane-page-content h2 {
   font-family: "open sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222;
   text-decoration: none;
   margin-top: 40px; }
-.logged-in.page-user .pane-page-content .pane-user-profile h2 {
-  display: none; }
 .logged-in.page-user .pane-page-content .pane-user-profile h3 {
   font-family: "open sans", sans-serif; }
 .logged-in.page-user .pane-page-content .pane-user-profile dl {
@@ -3976,14 +3963,14 @@ body {
   .logged-in.page-user .pane-page-content .pane-user-profile dl a {
     color: #222222;
     text-decoration: none;
-    transition: 300ms linear all; }
+    transition: colo .3s linear; }
     .logged-in.page-user .pane-page-content .pane-user-profile dl a:hover {
       color: #777777; }
 .logged-in.page-user .pane-page-content .view-content .views-row {
   width: 32%;
   float: left;
   overflow: hidden;
-  margin: 10px 10px 0 0; }
+  margin: 1% 1% 0 0; }
   .logged-in.page-user .pane-page-content .view-content .views-row .views-field-field-pictures {
     height: 250px;
     max-width: 100%; }
@@ -3996,10 +3983,9 @@ body {
     font-family: "open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: #222;
     text-decoration: none;
     font-size: 16px;
-    transition: 250ms linear all;
+    transition: color .25s linear;
     padding: 15px 0 10px 0;
     display: block; }
     .logged-in.page-user .pane-page-content .view-content .views-row .views-field-title a:hover {
@@ -4013,7 +3999,6 @@ body {
     font-family: "open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: #222;
     text-decoration: none;
     margin-bottom: 20px; }
   .node-type-painting .node-painting.clearfix {
@@ -4026,7 +4011,7 @@ body {
         .node-type-painting .node-painting.clearfix .field-label-above > div:last-child a {
           color: #777777;
           text-decoration: none;
-          transition: 300ms linear all; }
+          transition: color .3s linear; }
           .node-type-painting .node-painting.clearfix .field-label-above > div:last-child a:hover {
             color: #000; }
 
