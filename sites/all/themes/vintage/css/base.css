@@ -4113,4 +4113,107 @@ body {
     .page-gallery .circle-columns-column .views-row .views-field-field-pictures img {
       max-width: 100%; }
 
+/*  -------  page-node-add-painting  ------  */
+.page-node-add-painting {
+  color: #222; }
+  .page-node-add-painting label {
+    float: left;
+    font-family: "open sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 15px;
+    color: #222;
+    margin-top: 12px; }
+  .page-node-add-painting .form-wrapper {
+    overflow: hidden;
+    clear: both; }
+  .page-node-add-painting .field-body-label {
+    display: block;
+    clear: both; }
+  .page-node-add-painting .text-full.form-textarea {
+    font-family: "open sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #fff;
+    color: #222;
+    border: 0;
+    margin: 15px 0 30px 0;
+    max-width: 100%; }
+  .page-node-add-painting .grippie {
+    display: none; }
+  .page-node-add-painting #edit-body-und-0-format {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px; }
+    .page-node-add-painting #edit-body-und-0-format .filter-help a {
+      font-family: "open sans", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: none;
+      text-decoration: none; }
+  .page-node-add-painting .filter-guidelines-processed {
+    font-family: "open sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0; }
+    .page-node-add-painting .filter-guidelines-processed > div {
+      margin-left: 15px; }
+  .page-node-add-painting .field-type-image {
+    border-bottom: 1px solid #f0f0f0; }
+    .page-node-add-painting .field-type-image label {
+      margin-left: 15px; }
+    .page-node-add-painting .field-type-image legend span {
+      font-family: "open sans", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: none;
+      font-size: 20px; }
+    .page-node-add-painting .field-type-image .media-widget .button.browse {
+      color: #ff0000;
+      text-decoration: none;
+      float: left;
+      margin: 13px 0 0 25px; }
+    .page-node-add-painting .field-type-image .form-required {
+      margin-bottom: 0; }
+  .page-node-add-painting .field-name-field-picture-type {
+    margin-top: 30px; }
+    .page-node-add-painting .field-name-field-picture-type label {
+      float: none; }
+    .page-node-add-painting .field-name-field-picture-type .field-field_picture_type-label {
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .page-node-add-painting .field-name-field-picture-type .form-type-radio {
+      width: 24%;
+      float: left;
+      display: inline-block; }
+      .page-node-add-painting .field-name-field-picture-type .form-type-radio input {
+        float: left;
+        margin: 15px 10px 0 15px; }
+  .page-node-add-painting .field-name-field-picture-technique-tax {
+    margin-top: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px; }
+  .page-node-add-painting .group-picture-size {
+    margin-top: 25px;
+    border-bottom: 1px solid #f0f0f0; }
+    .page-node-add-painting .group-picture-size legend span {
+      font-size: 20px; }
+    .page-node-add-painting .group-picture-size .field-type-number-decimal {
+      margin-top: 10px;
+      position: relative; }
+      .page-node-add-painting .group-picture-size .field-type-number-decimal label {
+        margin-left: 15px; }
+      .page-node-add-painting .group-picture-size .field-type-number-decimal span {
+        position: absolute;
+        bottom: 8px;
+        left: 15px;
+        font-family: "open sans", sans-serif;
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 12px; }
+
 /*# sourceMappingURL=base.css.map */
