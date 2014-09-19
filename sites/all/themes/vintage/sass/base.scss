@@ -602,6 +602,7 @@ body {
 	.group-picture-size {
 		margin-top: 25px;
 		border-bottom: 1px solid #f0f0f0;
+		padding-bottom: 15px;
 		legend span {
 			font-size: 20px;
 		}
@@ -618,6 +619,16 @@ body {
 				@include sans-light();
 				font-size: 12px;
 			}
+		}
+	}
+	.field-name-field-picture-year {
+		border-bottom: 1px solid #f0f0f0;
+		legend span {
+			font-size: 20px;
+		}
+		select {
+			background-color: #000;
+			position: relative;
 		}
 	}
 }

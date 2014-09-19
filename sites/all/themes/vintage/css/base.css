@@ -4199,7 +4199,8 @@ body {
     padding-bottom: 10px; }
   .page-node-add-painting .group-picture-size {
     margin-top: 25px;
-    border-bottom: 1px solid #f0f0f0; }
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px; }
     .page-node-add-painting .group-picture-size legend span {
       font-size: 20px; }
     .page-node-add-painting .group-picture-size .field-type-number-decimal {
@@ -4215,5 +4216,12 @@ body {
         font-weight: 100;
         text-decoration: none;
         font-size: 12px; }
+  .page-node-add-painting .field-name-field-picture-year {
+    border-bottom: 1px solid #f0f0f0; }
+    .page-node-add-painting .field-name-field-picture-year legend span {
+      font-size: 20px; }
+    .page-node-add-painting .field-name-field-picture-year select {
+      background-color: #000;
+      position: relative; }
 
 /*# sourceMappingURL=base.css.map */
