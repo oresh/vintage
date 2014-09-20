@@ -3726,7 +3726,8 @@ body {
   background-color: #37363b;
   color: #c1bcb5;
   width: 100%;
-  height: 90px; }
+  height: 90px;
+  margin-bottom: 40px; }
   .page-header-wrapper .pane-page-site-name {
     display: block;
     font-family: 'brandon_g_bold', sans-serif;
@@ -4223,5 +4224,31 @@ body {
     .page-node-add-painting .field-name-field-picture-year select {
       background-color: #000;
       position: relative; }
+  .page-node-add-painting .field-type-taxonomy-term-reference .form-type-checkboxes > label {
+    float: none;
+    font-size: 20px;
+    margin-top: 25px; }
+  .page-node-add-painting .field-type-taxonomy-term-reference .form-type-checkbox {
+    width: 25%;
+    float: left; }
+    .page-node-add-painting .field-type-taxonomy-term-reference .form-type-checkbox input {
+      margin: 18px 0 0 10px; }
+  .page-node-add-painting .field-name-field-picture-styles {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 25px;
+    margin-bottom: 20px; }
+  .page-node-add-painting #edit-actions input {
+    float: right;
+    display: inline-block;
+    width: auto;
+    border-radius: 0;
+    padding: 10px 20px;
+    clear: none;
+    margin-left: 20px;
+    background-color: #37363b;
+    color: #fff;
+    transition: opacity .25s linear; }
+    .page-node-add-painting #edit-actions input:hover {
+      opacity: 0.8; }
 
 /*# sourceMappingURL=base.css.map */

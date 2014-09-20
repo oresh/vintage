@@ -58,6 +58,7 @@ body {
    color: #c1bcb5;
   	width: 100%;
    height: 90px;
+   margin-bottom: 40px;
 	.pane-page-site-name {
 		display: block;
 		font-family: 'brandon_g_bold', sans-serif;
@@ -629,6 +630,42 @@ body {
 		select {
 			background-color: #000;
 			position: relative;
+		}
+	}
+	.field-type-taxonomy-term-reference {
+		.form-type-checkboxes > label {
+			float: none;
+			font-size: 20px;
+			margin-top: 25px;
+		}
+		.form-type-checkbox {
+			width: 25%;
+			float: left;
+			input {
+				margin: 18px 0 0 10px;
+			}
+		}
+	}
+	.field-name-field-picture-styles {
+		border-bottom: 1px solid #f0f0f0;
+		padding-bottom: 25px;
+		margin-bottom: 20px;
+	}
+	#edit-actions {
+		input {
+			float: right;
+			display: inline-block;
+			width: auto;
+			border-radius: 0;
+			padding: 10px 20px;
+			clear: none;
+			margin-left: 20px;
+			background-color: #37363b;
+			color: #fff;
+			transition: opacity .25s linear;
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 }
