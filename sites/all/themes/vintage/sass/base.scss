@@ -823,13 +823,14 @@ body {
 		}
 	}
 	.frame-content {
-		.col-md-3 {
+		.col-md-3.circle-columns-column {
+			padding-right: 14px;
 			.row {
-				margin: 0;
+				margin-left: 0;
 			}
 			.views-exposed-widget {
 				border-top: none;
-				width: 106.1%;
+				width: 100%;
 				padding: 0;
 				margin: 0;
 				& > label {
@@ -852,7 +853,7 @@ body {
 					float: left;
 				}
 			}
-			.views-widget-filter-field_picture_type_tid {
+			.views-widget-filter-field_picture_type_tid, .views-widget-filter-field_total_width_value, .views-widget-filter-field_picture_author_tid {
 				text-transform: uppercase;
 				padding-right: 0;
 				& > label {
@@ -862,7 +863,18 @@ body {
 					border: 1px solid #e8e8e8;
 					border-bottom: none;
 					height: 40px;
-					input {display: none;}
+					input {
+						visibility: hidden;
+						position: absolute;
+						left: -9999px;
+						&:checked + label {
+							font-weight: bold;
+							width: 101%;
+							z-index: 20;
+							color: #ee654d;
+							border-left: 2px solid #ee654d;
+						}
+					}
 					label {
 						@include sans-regular();
 						font-size: 15px;
@@ -870,35 +882,10 @@ body {
 						padding-left: 15px;
 						line-height: 40px;
 						color: #37363b;
-					}
+						display: block;
+						background-color: #fff;
 					&:last-child {border-bottom: 1px solid #e8e8e8;}
-					&.active {
-						border-left: 2px solid #ee654d;
-						border-right: none;
-						label {color: #ee654d;}
 					}
-				}
-			}
-		}
-		.views-widget-filter-field_total_width_value, .views-widget-filter-field_picture_author_tid {
-			& > label {
-				border-right: 1px solid #e8e8e8;
-				border-bottom: 1px solid #e8e8e8;
-			}
-			select {
-				right: 0;
-				height: auto;
-				border-top: none;
-				padding: 0;
-				option {
-					margin: auto 10px;
-					border-bottom: 1px solid #E8E8E8;
-					line-height: 40px;
-					display: block;
-					padding: 11px 0;
-					text-transform: uppercase;
-					background-color: #fff;
-					&:last-child {border-bottom: none;}
 				}
 			}
 		}

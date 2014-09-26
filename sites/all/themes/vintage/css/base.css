@@ -4352,79 +4352,68 @@ body {
           background-image: url(../images/diamond_active.png);
           background-color: #f9f9f9;
           border-bottom: 1px solid #a4b4d7; }
-  .page-gallery .frame-content .col-md-3 .row {
-    margin: 0; }
-  .page-gallery .frame-content .col-md-3 .views-exposed-widget {
-    border-top: none;
-    width: 106.1%;
-    padding: 0;
-    margin: 0; }
-    .page-gallery .frame-content .col-md-3 .views-exposed-widget > label {
-      font-family: "open sans", sans-serif;
-      font-weight: normal;
-      font-style: normal;
-      text-decoration: none;
-      color: #37363b;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-weight: 600;
-      padding: 20px 0; }
-  .page-gallery .frame-content .col-md-3 .views-widget-filter-title {
-    border-right: 1px solid #e8e8e8; }
-    .page-gallery .frame-content .col-md-3 .views-widget-filter-title > label {
-      padding-top: 5px; }
-    .page-gallery .frame-content .col-md-3 .views-widget-filter-title input {
-      right: 0;
-      border-radius: 26px;
-      padding-left: 15px;
-      max-width: 95%;
-      float: left; }
-  .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid {
-    text-transform: uppercase;
-    padding-right: 0; }
-    .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid > label {
-      border-right: 1px solid #e8e8e8; }
-    .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox {
-      border: 1px solid #e8e8e8;
-      border-bottom: none;
-      height: 40px; }
-      .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox input {
-        display: none; }
-      .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox label {
+  .page-gallery .frame-content .col-md-3.circle-columns-column {
+    padding-right: 14px; }
+    .page-gallery .frame-content .col-md-3.circle-columns-column .row {
+      margin-left: 0; }
+    .page-gallery .frame-content .col-md-3.circle-columns-column .views-exposed-widget {
+      border-top: none;
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+      .page-gallery .frame-content .col-md-3.circle-columns-column .views-exposed-widget > label {
         font-family: "open sans", sans-serif;
         font-weight: normal;
         font-style: normal;
         text-decoration: none;
-        font-size: 15px;
-        font-weight: 400;
+        color: #37363b;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 20px 0; }
+    .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-title {
+      border-right: 1px solid #e8e8e8; }
+      .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-title > label {
+        padding-top: 5px; }
+      .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-title input {
+        right: 0;
+        border-radius: 26px;
         padding-left: 15px;
-        line-height: 40px;
-        color: #37363b; }
-      .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox:last-child {
-        border-bottom: 1px solid #e8e8e8; }
-      .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox.active {
-        border-left: 2px solid #ee654d;
-        border-right: none; }
-        .page-gallery .frame-content .col-md-3 .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox.active label {
-          color: #ee654d; }
-  .page-gallery .frame-content .views-widget-filter-field_total_width_value > label, .page-gallery .frame-content .views-widget-filter-field_picture_author_tid > label {
-    border-right: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8; }
-  .page-gallery .frame-content .views-widget-filter-field_total_width_value select, .page-gallery .frame-content .views-widget-filter-field_picture_author_tid select {
-    right: 0;
-    height: auto;
-    border-top: none;
-    padding: 0; }
-    .page-gallery .frame-content .views-widget-filter-field_total_width_value select option, .page-gallery .frame-content .views-widget-filter-field_picture_author_tid select option {
-      margin: auto 10px;
-      border-bottom: 1px solid #E8E8E8;
-      line-height: 40px;
-      display: block;
-      padding: 11px 0;
+        max-width: 95%;
+        float: left; }
+    .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid {
       text-transform: uppercase;
-      background-color: #fff; }
-      .page-gallery .frame-content .views-widget-filter-field_total_width_value select option:last-child, .page-gallery .frame-content .views-widget-filter-field_picture_author_tid select option:last-child {
-        border-bottom: none; }
+      padding-right: 0; }
+      .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid > label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value > label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid > label {
+        border-right: 1px solid #e8e8e8; }
+      .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value .form-type-bef-checkbox, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid .form-type-bef-checkbox {
+        border: 1px solid #e8e8e8;
+        border-bottom: none;
+        height: 40px; }
+        .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox input, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value .form-type-bef-checkbox input, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid .form-type-bef-checkbox input {
+          visibility: hidden;
+          position: absolute;
+          left: -9999px; }
+          .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox input:checked + label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value .form-type-bef-checkbox input:checked + label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid .form-type-bef-checkbox input:checked + label {
+            font-weight: bold;
+            width: 101%;
+            z-index: 20;
+            color: #ee654d;
+            border-left: 2px solid #ee654d; }
+        .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value .form-type-bef-checkbox label, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid .form-type-bef-checkbox label {
+          font-family: "open sans", sans-serif;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 400;
+          padding-left: 15px;
+          line-height: 40px;
+          color: #37363b;
+          display: block;
+          background-color: #fff; }
+          .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_type_tid .form-type-bef-checkbox label:last-child, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_total_width_value .form-type-bef-checkbox label:last-child, .page-gallery .frame-content .col-md-3.circle-columns-column .views-widget-filter-field_picture_author_tid .form-type-bef-checkbox label:last-child {
+            border-bottom: 1px solid #e8e8e8; }
   .page-gallery .frame-content .views-submit-button input {
     right: 0;
     width: auto;
