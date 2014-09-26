@@ -4447,6 +4447,6 @@ body {
   .page-gallery .frame-content .col-md-9.circle-columns-column .pager-current {
     color: #ee654d; }
   .page-gallery .view-content .views-row:last-child {
-    margin-bottom: 40px !important; }
+    margin-bottom: 40px; }
 
 /*# sourceMappingURL=base.css.map */
