@@ -1539,7 +1539,7 @@ body {
   color: #37353b;
   /* text color */
   font-family: "open sans", sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 100;
   padding: 0 0 30px 0; }
 
@@ -1708,13 +1708,14 @@ body {
 /* help Section */
 /*----------------------- */
 .container .one-third.column {
+  display: inline-block;
   width: 300px; }
 
-.container .one-third.column:first-child {
-  margin-left: 140px !important; }
 
 #help {
-  background: #f7f7f7 url(../img/bg-pattern-1.png) no-repeat center top/auto 100%;
+  background: #f7f7f7 url(../img/bg-pattern-1.png) no-repeat top center;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
   text-align: center;
   padding: 70px 0 60px; }
 
@@ -2609,8 +2610,6 @@ h2.resp-tab-title:last-child {
 /* #Media Queries
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
-  .container .one-third.column:first-child {
-    margin-left: 30px !important; }
 
   #header h1 {
     margin: 0 0 0 30px; }
@@ -2719,9 +2718,6 @@ h2.resp-tab-title:last-child {
     background: #cac9c6 url(../img/bg-intro.png) center bottom no-repeat;
     height: auto;
     padding-bottom: 252px; }
-
-  .container .one-third.column:first-child {
-    margin-left: 25px !important; }
 
   #header .language .language-ul {
     padding: 0 0 0 675px; }
@@ -2857,6 +2853,7 @@ h2.resp-tab-title:last-child {
     margin-bottom: 0; }
 
   .container .one-third.column {
+    display: inline-block;
     width: 220px; }
 
   .container .details.three.columns {
@@ -2927,8 +2924,6 @@ h2.resp-tab-title:last-child {
     font-size: 22px; } }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  .container .one-third.column:first-child {
-    margin-left: 0 !important; }
 
   #header .columns {
     text-align: center; }
@@ -3999,6 +3994,10 @@ body {
   .form-item-files-picture-upload small {
     letter-spacing: .5px;
     margin-left: 30px; }
+
+.nine.columns.alpha {
+  width: 50%;
+}
 
 /*  -------  header-user-form  ------  */
 .logged-in.page-user .pane-page-content h2 {

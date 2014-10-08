@@ -16,13 +16,33 @@
   <meta name="HandheldFriendly" content="true">
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
-  <?php print $page_top; ?>
+  <header id="header">
+    <div class="container">
+        <div class="sixteen columns">
+            <div class="language">
+                <ul class="language-ul">
+                    <li><a href="/ro">ro</a></li>
+                    <li><a href="/ru" class="active">en</a></li>
+                </ul>
+            </div>
+            <a href="index.php"><h1>Vintage</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="/artist">Artists</a></li>
+                    <li><a href="/business">Businesses</a></li>
+                    <li><a href="/gallery" class="menu-last" value="">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </header>
   <div id="main-slide">
         <ul class="slides">
           <li id="intro" class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
@@ -31,7 +51,7 @@
                   <div class="nine columns alpha">
                     <h2>Smart Art that suits you</h2>
                     <p>Vintage enables businesses to decorate their offices with artworks made by the most talented artists from developing countries.</p>
-                    <a class="btn" href="gallery.php" value="download">gallery</a>
+                    <a class="btn" href="/gallery" value="download">gallery</a>
                   </div>
               </div>
             </div>

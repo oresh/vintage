@@ -4,11 +4,13 @@ core        = 7.x
 base theme	= circle
 
 ; Theme styles
+stylesheets[all][] = css/flexslider.css
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/main.css
 
 
 ; Theme scripts
+scripts[] = js/jquery.flexslider-min.js
 scripts[] = js/main.js
 
 regions[header] = Header
