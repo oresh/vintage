@@ -15,12 +15,11 @@
  */
 ?>
 <?php $panel_class = check_plain((isset($settings['panel_class']) && $settings['panel_class']) ? $settings['panel_class'] : ''); ?>
-<div class="panel-three-column clearfix container-fluid <?php print $panel_class; ?>" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
+<div class="panel-three-column gallery-page clearfix container-fluid <?php print $panel_class; ?>" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
 <?php if ($content['one'] || $content['two'] || $content['three']): ?>
     <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
       <div class="container">
     <?php endif; ?>
-      <div class="row">
         <div class="page-header-wrapper">
         <?php if (isset($content['one']) && $content['one']): ?>
           <div class="container">
@@ -40,7 +39,6 @@
           <?php print $content['three']; ?>
         <?php endif; ?>
         </div>
-      </div>
     <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
       </div>
     <?php endif; ?>
