@@ -20,3 +20,14 @@ function vintage_form_alter(&$form, &$form_state) {
     }
   }
 }
+
+function vintage_preprocess_panels_pane(&$vars) {
+  if (isset($vars['pane']->type) && $vars['pane']->type == 'page_site_name') {
+    $vars['content'] = l($vars['content'], '<front>');
+  }
+  //dpm($vars);
+}
+
+function vintage_preprocess_node(&$vars) {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
+}

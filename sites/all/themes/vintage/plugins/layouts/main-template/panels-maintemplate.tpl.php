@@ -20,26 +20,24 @@
     <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
       <div class="container">
     <?php endif; ?>
-      <div class="row">
-        <div class="page-header-wrapper">
-        <?php if (isset($content['one']) && $content['one']): ?>
-          <div class="container">
-            <div class="row">
-              <?php print $content['one']; ?>
-            </div>
+      <div class="page-header-wrapper">
+      <?php if (isset($content['one']) && $content['one']): ?>
+        <div class="container">
+          <div class="row">
+            <?php print $content['one']; ?>
           </div>
-        <?php endif; ?>
         </div>
-        <div class="page-content-wrapper">
-        <?php if (isset($content['two']) && $content['two']): ?>
-          <?php print $content['two']; ?>
-        <?php endif; ?>
-        </div>
-        <div class="page-footer-wrapper">
-        <?php if (isset($content['three']) && $content['three']): ?>
-          <?php print $content['three']; ?>
-        <?php endif; ?>
-        </div>
+      <?php endif; ?>
+      </div>
+      <div class="page-content-wrapper">
+      <?php if (isset($content['two']) && $content['two']): ?>
+        <?php print $content['two']; ?>
+      <?php endif; ?>
+      </div>
+      <div class="page-footer-wrapper">
+      <?php if (isset($content['three']) && $content['three']): ?>
+        <?php print $content['three']; ?>
+      <?php endif; ?>
       </div>
     <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
       </div>
