@@ -1,0 +1,9 @@
+.layout-settings-wrapper {
+  padding-top: 3em;
+}
+.layout-settings-wrapper .fieldset-legend {
+  margin-top: 0.8em; 
+}
+.layout-settings-wrapper .fieldset-wrapper {
+  padding-bottom: 0;
+}

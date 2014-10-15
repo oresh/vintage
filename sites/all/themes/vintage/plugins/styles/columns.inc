@@ -59,6 +59,7 @@ function theme_circle_column_style_render_region($vars) {
       'wrapper_classes' => $grid_class,
       'wrapper_class' => implode(' ', $grid_class),
       'has_row' => $settings['grid_system'] != 'ninesixty',
+      'use_row' => isset($settings['use_row']) ? $settings['use_row'] : 1,
     );
     return theme('circle_column_region_style', $output);
   }
@@ -217,6 +218,11 @@ function _circle_columns_return_settings_form($style_settings) {
     '#size' => 60,
     '#maxlength' => 128,
     '#default_value' => (isset($style_settings['additional_class'])) ? $style_settings['additional_class'] : '',
+  );
+  $form['use_row'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use .row wrapper inside?'),
+    '#default_value' => (isset($style_settings['use_row'])) ? $style_settings['use_row'] : 1,
   );
 
   return $form;

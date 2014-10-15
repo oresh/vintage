@@ -13,19 +13,25 @@
  */
 ?>
 <?php $panel_class = check_plain((isset($settings['panel_class']) && $settings['panel_class']) ? $settings['panel_class'] : ''); ?>
+<?php if (isset($settings['use_container']) && $settings['use_container']) {$use_container = TRUE;} else {$use_container = FALSE;} ?>
+<?php if (isset($settings['default_behavior']) && $settings['default_behavior']) {$default_behavior = TRUE;} else {$default_behavior = FALSE;} ?>
 <div class="panel-one-column clearfix container-fluid <?php print $panel_class; ?>" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
   <?php if ($content['one']): ?>
-    <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
+    <?php if ($use_container): ?>
       <div class="container">
     <?php endif; ?>
       <div class="row">
-        <div class="col-md-12">
+        <?php if ($default_behavior): ?>
+          <div class="col-md-12">
+        <?php endif; ?>
           <?php if (isset($content['one']) && $content['one']): ?>
             <?php print $content['one']; ?>
           <?php endif; ?>
-        </div>
+        <?php if ($default_behavior): ?>
+          </div>
+        <?php endif; ?>
       </div>
-    <?php if (isset($settings['use_container']) && $settings['use_container']): ?>
+    <?php if ($use_container): ?>
       </div>
     <?php endif; ?>
   <?php endif; ?>

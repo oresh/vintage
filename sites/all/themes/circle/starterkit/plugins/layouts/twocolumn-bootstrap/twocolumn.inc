@@ -14,7 +14,7 @@ $plugin = array(
   'icon' => 'twocolumn.png',
   'theme' => 'panels_twocolumn',
   'css' => 'twocolumn.css',
-  'settings' => array('use_container' => NULL, 'panel_class' => NULL),
+  'settings' => array('default_behavior' => NULL, 'use_container' => NULL, 'panel_class' => NULL),
   'settings form' => '_circle_bootstrap_layout_settings_form',
   'regions' => array(
     'one' => t('Left'),

@@ -14,9 +14,16 @@ function _circle_bootstrap_layout_settings_form($display, $layout, $layout_setti
     '#title' => t('Use .container wrapper'),
     '#default_value' => (isset($layout_settings['use_container'])) ? $layout_settings['use_container'] : 1,
   );
+  if ($layout['theme'] != 'panels_fivecolumn') {
+    $form['default_behavior'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Divide columns in equal widths. <strong>Disable for different behavior</strong>.'),
+      '#default_value' => (isset($layout_settings['default_behavior'])) ? $layout_settings['default_behavior'] : 0,
+    );
+  }
   $form['panel_class'] = array(
     '#type' => 'textfield',
-    '#title' => t('Panel additional class'),
+    '#title' => t('Panel layout wrapper additional class'),
     '#size' => 60,
     '#maxlength' => 128,
     '#default_value' => isset($layout_settings['panel_class']) ? $layout_settings['panel_class'] : '',

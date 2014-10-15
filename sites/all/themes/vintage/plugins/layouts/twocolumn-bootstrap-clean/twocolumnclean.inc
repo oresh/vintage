@@ -9,14 +9,15 @@ $circle_path = drupal_get_path('theme', 'circle');
 include_once './' . $circle_path . '/plugins/layouts/bootstrap-settings.inc';
 
 $plugin = array(
-  'title' => t('(1) One Column'),
+  'title' => t('(2) Two Columns - No row'),
   'category' => t('Bootstrap Columns'),
-  'icon' => 'onecolumn.png',
-  'theme' => 'panels_onecolumn',
-  'css' => 'onecolumn.css',
-  'settings' => array('default_behavior' => NULL, 'use_container' => NULL, 'panel_class' => NULL),
+  'icon' => 'twocolumnclean.png',
+  'theme' => 'panels_twocolumnclean',
+  'css' => 'twocolumnclean.css',
+  'settings' => array('use_container' => NULL, 'panel_class' => NULL),
   'settings form' => '_circle_bootstrap_layout_settings_form',
   'regions' => array(
-    'one' => t('Main'),
+    'one' => t('Left'),
+    'two' => t('Right'),
   ),
 );
