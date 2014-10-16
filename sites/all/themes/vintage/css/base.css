@@ -772,8 +772,12 @@ span.field-label {
 
 /* The current page's list item. */
 .pager-current {
-  font-weight: bold; }
-
+    font-weight: bold;
+    line-height: 30px !important;
+}
+.pager li a {
+    text-decoration: none;
+}
 /**
  * Blocks.
  */
@@ -1919,7 +1923,14 @@ body.front .panel-three-column .row {
   font-weight: 400; }
 
 .profile {
-  margin-top: 44px; }
+    margin-top: 44px;
+}
+.profile .field .field-label {
+    font-family: "open sans",sans-serif;
+    font-size: 28px;
+    margin: 20px 0 10px;
+    font-weight: normal;
+}
 
 .rounded {
   display: inline-block;
@@ -3812,7 +3823,11 @@ body {
     margin-top: 20px;
     font-family: 'brandon_g_bold', sans-serif;
     font-size: 20px;
-    color: #fff; }
+    color: #fff;
+  }
+.page-footer-wrapper .pane-page-site-name .page-contenet a {
+    text-decoration: none !important;
+}
   .page-footer-wrapper .pane-menu-menu-footer-menu {
     float: left;
     margin-top: 20px; }
@@ -4094,7 +4109,9 @@ body {
   text-decoration: none;
   margin-top: 40px; }
 .logged-in.page-user .pane-page-content .pane-user-profile h3 {
-  font-family: "open sans", sans-serif; }
+    font-family: "open sans", sans-serif;
+    margin-top: 20px;
+}
 .logged-in.page-user .pane-page-content .pane-user-profile dl {
   font-family: "open sans", sans-serif; }
   .logged-in.page-user .pane-page-content .pane-user-profile dl dt {
@@ -4113,7 +4130,7 @@ body {
       display: block;
       margin: 0 auto; }
     .style-300xauto {
-      max-width: 100%;
+        width: 100%;
     }
   .logged-in.page-user .pane-page-content .view-content .views-row .views-field-title a {
     font-family: "open sans", sans-serif;
@@ -4165,6 +4182,7 @@ body {
     .page-gallery .circle-columns-column .views-row .views-field-field-pictures {
       max-height: 360px;
       overflow: hidden;
+      padding: 5px;
     }
     .page-gallery .circle-columns-column .views-row .views-field-field-pictures img {
       width: 100%;
@@ -4630,6 +4648,24 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+.contextual-links-processed .col-md-3 {
+    padding: 5px !important;
+    margin: 0 !important;
+}
+.frame-top {
+    border-bottom: 1px dashed #E8E8E8;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.pane-node-field-pictures {
+    margin-bottom: 10px;
+    display: block;
+}
+.field-items > div {
+    display: inline-block;
 }
 .view-gallery .views-row .panel-col-first {
   float: none;
@@ -4709,4 +4745,12 @@ body {
   background: #b0b0b0;
   color: #fff;
   text-shadow: 0 1px 1px #888;
+}
+
+.painting-node-lower h3 {
+    margin-top: 20px;
+}
+
+.panels-ipe-paneid-36 {
+
 }
