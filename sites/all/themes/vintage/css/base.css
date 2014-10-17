@@ -773,7 +773,7 @@ span.field-label {
 /* The current page's list item. */
 .pager-current {
     font-weight: bold;
-    line-height: 30px !important;
+    line-height: 30px;
 }
 .pager li a {
     text-decoration: none;
@@ -4629,7 +4629,10 @@ body {
     color: #ee654d; }
 
 .gallery-page .page-header-wrapper {
-  margin-bottom: 0;
+    margin-bottom: 0;
+}
+.page-gallery .pager .pager-current {
+    line-height: 18px;
 }
 
 /*# sourceMappingURL=base.css.map */
@@ -4751,6 +4754,9 @@ body {
     margin-top: 20px;
 }
 
-.panels-ipe-paneid-36 {
-
+.page-cart label {
+    font-size: 16px;
+    font-family: "open sans", sans-serif;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
