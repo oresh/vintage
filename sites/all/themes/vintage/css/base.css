@@ -1449,6 +1449,11 @@ body.front .panel-three-column .row {
   margin-right: 0;
 }
 
+body.front .page-content-wrapper {
+  background: #fff;
+  padding-top: 35px;
+  border-bottom: 1px #ddd solid;
+}
 
 /* #Page Styles
 ================================================== */
@@ -4175,14 +4180,11 @@ body {
   font-style: normal;
   text-decoration: none;
   width: 100%; }
-  .page-gallery .circle-columns-column .views-row .views-field {
-    margin-bottom: 5px; }
   .page-gallery .circle-columns-column .views-row .views-field-field-pictures {
     margin-bottom: 10px; }
     .page-gallery .circle-columns-column .views-row .views-field-field-pictures {
       max-height: 360px;
       overflow: hidden;
-      padding: 5px;
     }
     .page-gallery .circle-columns-column .views-row .views-field-field-pictures img {
       width: 100%;
@@ -4205,22 +4207,39 @@ body {
        bottom: 0;
        left: 0;
     }
+    .views-field-field-picture-type .picture-type-4,
+    .picture-type-4 .field-name-field-picture-type {
+      color: #a4b4d7;
+    }
     .picture-type-4:after {
       /* diamond */
        background: #a4b4d7;
+    }
+    .views-field-field-picture-type .picture-type-3,
+    .picture-type-3 .field-name-field-picture-type {
+      color: #fab753;
     }
     .picture-type-3:after {
       /* gold */
       background: #fab753;
     }
+    .views-field-field-picture-type .picture-type-2,
+    .picture-type-2 .field-name-field-picture-type {
+      color: #bababa;
+    }
     .picture-type-2:after {
       /* silver */
       background: #bababa;
+    }
+    .views-field-field-picture-type .picture-type-1,
+    .picture-type-1 .field-name-field-picture-type {
+      color: #e1b88a;
     }
     .picture-type-1:after {
       /* bronze */
       background: #e1b88a;
     }
+    
 
 /*  -------  page-node-add-painting  ------  */
 .page-node-add-painting {
@@ -4652,8 +4671,118 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   width: 100%;
-  padding: 5px;
+  color: #37363b;
+  font-family: 'proxima_reg';
 }
+.view-gallery .views-field-field-picture-year {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.view-gallery .views-field-field-picture-year a {
+  text-decoration: none;
+  color: #37363b;
+}
+.view-gallery .views-field-field-picture-author {
+  font-size: 16px;
+}
+.view-gallery .views-field-field-picture-technique-tax {
+  font-size: 15px;
+  color: #b7ada0;
+  float: left;
+  margin-right: 5px;
+}
+.view-gallery .views-field-field-picture-height {
+  float: left;
+  font-size: 15px;
+  color: #b7ada0;
+}
+.view-gallery .views-field-field-picture-type {
+  clear: both;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+.view-gallery .views-field-field-picture-type:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  position: relative;
+  top: -9px;
+  background: #dbd6cf;
+}
+
+.view-gallery .flag-throbber {
+  display: none;
+}
+.view-gallery .flag-cart {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: inline-block;
+  width: auto;
+  height: 20px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #b7ada0;
+  background: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.view-gallery .flag-cart a {
+  border-radius: 3px;
+  border: 1px #b7ada0 solid;
+  text-decoration: none;
+  color: #b7ada0;
+  display: block;
+  line-height: 18px;
+  padding: 0 6px;
+}
+.view-gallery .flag-cart a.flag-action {
+  position: relative;
+  padding-left: 10px;
+  text-indent: 100px;
+  width: 24px;
+  overflow: hidden;
+}
+.view-gallery .flag-cart a.flag-action:before,
+.view-gallery .flag-cart a.flag-action:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: #b7ada0;
+  top: 5px;
+  left: 10px;
+}
+.view-gallery .flag-cart a.flag-action:after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  top: 8px;
+  left: 7px;
+}
+.view-gallery .flag-cart a.flag-action:hover {
+  text-indent: 0;
+  padding-left: 20px;
+  width: auto;
+  border: 1px #ee654d solid;
+  background: #ee654d;
+  color: #fff;
+}
+.view-gallery .flag-cart a.flag-action:hover:before,
+.view-gallery .flag-cart a.flag-action:hover:after {
+  background: #fff;
+}
+.view-gallery .flag-cart a.unflag-action {
+  
+}
+
+
 .contextual-links-processed .col-md-3 {
     padding: 5px !important;
     margin: 0 !important;
@@ -4667,15 +4796,22 @@ body {
     margin-bottom: 10px;
     display: block;
 }
-.field-items > div {
+.field-name-field-painting-keywords .field-items > div {
     display: inline-block;
+}
+.field-name-field-painting-keywords .field-items > div:before {
+  content: ',';
+  margin-right: 3px;
+}
+.field-name-field-painting-keywords .field-items > div:first-child:before {
+  display: none;
 }
 .view-gallery .views-row .panel-col-first {
   float: none;
   width: 100%;
 }
 .view-gallery .views-row .panel-col-last {
-  padding: 13px 15px;
+  padding: 8px 15px 13px;
   width: auto;
   float: none;
 }
@@ -4754,9 +4890,217 @@ body {
     margin-top: 20px;
 }
 
-.page-cart label {
+.page-cart .webform-client-formlabel {
     font-size: 16px;
     font-family: "open sans", sans-serif;
     margin-bottom: 10px;
     font-weight: normal;
+}
+
+.page-cart .views-field-nid{
+  display: none;
+}
+
+/* Painting node page. */
+.node-type-painting .field-name-field-pictures img{
+  border: 1px #fff solid;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.painting-node-upper {
+  background: #fbfbfb;
+  border: 1px #d9d9d9 solid;
+  border-bottom: 0;
+  padding: 16px 25px 12px 25px;
+}
+.painting-node-lower {
+  background: #fbfbfb;
+}
+.pane-flag-link.pane-node {
+  background: #fbfbfb;
+  border: 1px #ebebeb solid;
+  border-top: none;
+  padding: 15px 0;
+  text-align: center;
+}
+.pane-flag-link.pane-node a.flag-action,
+.pane-flag-link.pane-node a.unflag-action {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 21px;
+  border-radius: 14px;
+  background: #ee654d;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'brandon_g_bold';
+  font-size: 15px;
+  text-decoration: none;
+  word-spacing: 2px;
+}
+.pane-flag-link.pane-node a.flag-action:hover {
+  background: #d94a31;
+}
+.pane-flag-link.pane-node a.flag-action:after {
+  content: ' to cart';
+}
+.pane-flag-link.pane-node a.unflag-action {
+  background: #c7c7c7;
+}
+.pane-flag-link.pane-node a.unflag-action:hover {
+  background: #a7a7a7;
+}
+.pane-flag-link.pane-node a.unflag-action:after {
+  content: ' from cart';
+}
+.pane-flag-link.pane-node .flag-throbber {
+  display: none;
+}
+.painting-node-upper h2.node-title {
+  margin-bottom: 0;
+}
+.painting-node-upper h2.node-title .name{
+  font-family: 'brandon_g_bold';
+  font-size: 26px;
+  margin-right: -8px;
+}
+.painting-node-upper h2.node-title .sep {
+  margin-right: 3px;
+  font-weight: bold;
+}
+.painting-node-upper h2.node-title .sep,
+.painting-node-upper h2.node-title .date-display-single {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+.painting-node-upper .field-name-field-picture-technique-tax,
+.painting-node-upper .painting-sizes,
+.painting-node-upper .field-name-field-painting-signed {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+}
+.painting-node-upper .field-name-field-picture-author {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin-bottom: 15px;
+}
+.painting-node-upper .field-name-field-picture-author:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: -7px;
+  width: 55px;
+  height: 1px;
+  background: #d0d0d0;
+}
+.painting-node-upper .field-name-field-picture-type {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.painting-prices {
+  background: #fbfbfb;
+}
+.painting-prices > div {
+  border: 1px #d9d9d9 solid;
+  border-left: none;
+}
+.painting-prices > div:first-child {
+  border-left: 1px #d9d9d9 solid;
+  border-right: 1px #d9d9d9 dashed;
+}
+.painting-prices h3{
+  display: block;
+  margin: 20px 0 16px 10px;
+  color: #37363b;
+  text-transform: uppercase;
+  font-family: 'brandon_g_bold';
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1em;
+  position: relative;
+}
+.painting-prices h3:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 31px;
+  height: 1px;
+  background: #37363b;
+}
+.painting-prices p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-family: 'brandon_g_bold';
+  font-style: italic;
+  padding-left: 10px;
+}
+.painting-prices .painting-sell h3:before {
+  left: 0;
+  bottom: -8px;
+}
+.painting-prices .painting-rent h3:before {
+  right: 0;
+  bottom: -8px;
+  background: #ee654d;
+}
+.painting-prices .painting-sell:after {
+  content: 'or';
+  display: block;
+  position: absolute;
+  font-family: serif;
+  font-size: 13px;
+  line-height: 1.4em;
+  color: #848486;
+  height: 22px;
+  width: 22px;
+  border: 1px #d9d9d9 solid;
+  border-radius: 100%;
+  text-align: center;
+  top: 20px;
+  right: -11px;
+  background: #fff;
+}
+.painting-prices .painting-rent h3 {
+  text-align: right;
+  color: #ee654d;
+  margin-right: 10px;
+  margin-left: 0;
+}
+.painting-prices .painting-rent p {
+  text-align: right;
+  color: #ee654d;
+  padding-left: 0;
+  padding-right: 10px;
+}
+.painting-rent-prices {
+  clear: both;
+  background: #fbfbfb;
+  overflow: hidden;
+}
+.painting-rent-prices > div {
+  border: 1px #d9d9d9 solid;
+  border-top: 0;
+  border-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.painting-rent-prices > div:first-child {
+  border-left: 1px #d9d9d9 solid;
+}
+.painting-rent-prices b,
+.painting-rent-prices em {
+  display: block;
+}
+.painting-rent-prices b {
+  font-family: 'brandon_g_bold';
+  font-size: 15px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
 }

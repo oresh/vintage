@@ -36,7 +36,9 @@
       <?php endif; ?>
       
       <?php if (isset($content['field_picture_width']) && isset($content['field_picture_height'])): ?>
-        <?php print $content['field_picture_width'][0]['#markup'] . '<span class="sep">x</span>' . $content['field_picture_height'][0]['#markup']; ?>  
+        <div class="painting-sizes">
+          <?php print $content['field_picture_width'][0]['#markup'] . '<span class="sep">x</span>' . $content['field_picture_height'][0]['#markup']; ?>  
+        </div>
       <?php endif; ?>
       
       <?php if (isset($content['field_painting_signed'])): ?>
@@ -53,17 +55,17 @@
     
     </div>
     <div class="painting-node-lower">
-      <div class="row painting-prices">
-        <div class="col-md-6">
+      <div class="painting-prices">
+        <div class="col-md-6 painting-sell">
           <h3>Buy</h3>
           <p><?php print $pricesBuy[$type]; ?> EUR</p>
         </div>
-        <div class="col-md-6 ta-right">
+        <div class="col-md-6 painting-rent">
           <h3>Rent</h3>
           <p><?php print $pricesRent[$type]; ?> MDL/Mo.</p>
         </div>
       </div>
-      <div class="row">
+      <div class="painting-rent-prices">
       <?php for($i = 0; $i < 3; $i++): ?>
         <div class="col-md-4">
           <b><?php print $pricesMonths[$i]; ?> Months</b>
