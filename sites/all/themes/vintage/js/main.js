@@ -95,6 +95,18 @@
           }
         }
       }
+
+      var $inputs = $('.views-exposed-form input');
+      var updateFilters = function() {
+        setTimeout(function(){
+          $('.views-exposed-form').closest('form').submit();
+        }, 200);
+      }
+
+      $inputs.change(function(e) {
+        var $this = $(this);
+        updateFilters();
+      });
     }
   }
 
