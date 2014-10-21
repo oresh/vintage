@@ -4164,6 +4164,10 @@ body {
     .style-300xauto {
         width: 100%;
     }
+  .views-field-field-pictures {
+    max-height: 420px;
+    overflow: hidden;
+  }
   .logged-in.page-user .pane-page-content .view-content .views-row .views-field-title a {
     font-family: "open sans", sans-serif;
     font-weight: normal;
