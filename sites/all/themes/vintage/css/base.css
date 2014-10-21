@@ -5163,3 +5163,17 @@ body {
 #webform-component-paintings {
   display: none;
 }
+
+.painting-sizes .sep {
+  font-size: 13px;
+  padding: 0 3px;
+  color: #888;
+  position: relative;
+  top: 1px;
+}
+
+.view-gallery.view-display-id-panel_pane_1 .views-field-field-picture-height,
+.view-gallery.view-display-id-panel_pane_3 .views-field-field-picture-height {
+  float: none;
+  clear: both;
+}
