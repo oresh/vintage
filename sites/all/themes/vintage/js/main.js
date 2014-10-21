@@ -70,4 +70,60 @@
     }
   };
 
+  Drupal.behaviors.vintageFilterClone = {
+    attach: function (context) {
+      var $types = $('.page-gallery .frame-prices .pane-custom ul.col-md-3');
+      if ($types.length) {
+        var $filters = $('.form-item-field-picture-type-tid .form-type-bef-checkbox');
+        
+        $types.click(function(e) {
+          var $this = $(this);
+          var ind = $this.index();
+          $this.toggleClass('active');
+          var find = '.form-item-edit-field-picture-type-tid-' + (ind+1);
+          var $checkbox = $filters.filter(find).find('input');
+          $checkbox.click();
+        });
+
+        for (var i = 0, len = $filters.length; i < len; i++) {
+          var $filter = $filters.eq(i);
+          var filterClass = $filter.attr('class');
+          var filterId = filterClass.split('-type-tid-');
+          filterId = parseInt(filterId[1]) - 1;
+          if ($filter.find('input').is(':checked')) {
+            $types.eq(filterId).addClass('active');
+          }
+        }
+      }
+    }
+  }
+
+  Drupal.behaviors.vintageAddTimesToTextarea = {
+    attach: function (context) {
+      if ($('body').hasClass('page-cart')) {
+        var getPaintingsInCart = function() {
+          var $view = $('.view-gallery.view-display-id-panel_pane_3');
+          var $items = $view.find('.views-row');
+          var text = '';
+          for (var i = 0, len = $items.length; i < len; i++) {
+            var $this = $items.eq(i);
+            if ($this.find('.unflag-action').length) {
+              text += 'Name: ' + $this.find('.views-field-field-picture-year a').text();
+              text += '\n';
+              text += 'Link: http://v1ntage.com/node/' + $this.find('.views-field-nid .field-content').text();
+              text += '\n\n';
+            }
+          }
+          console.log(text);
+          $('#webform-component-paintings textarea').val(text);
+        }
+        getPaintingsInCart();
+
+        $('.unflag-action').click(function() {
+          setTimeout(function(){getPaintingsInCart();},500);
+        });
+      }
+    }
+  }
+
 })(jQuery);

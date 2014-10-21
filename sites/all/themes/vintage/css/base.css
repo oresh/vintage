@@ -3834,13 +3834,27 @@ body {
     text-decoration: none !important;
 }
   .page-footer-wrapper .pane-menu-menu-footer-menu {
-    float: left;
-    margin-top: 20px; }
-    .page-footer-wrapper .pane-menu-menu-footer-menu .menu-menu-footer-menu li {
-      margin: 10px; }
-      .page-footer-wrapper .pane-menu-menu-footer-menu .menu-menu-footer-menu li a {
-        color: #fff;
-        text-decoration: none; }
+    float: right;
+    margin-top: -20px;
+  }
+  .page-footer-wrapper .pane-menu-menu-footer-menu .menu-menu-footer-menu li {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  .page-footer-wrapper .pane-menu-menu-footer-menu .menu-menu-footer-menu li a {
+    color: #c1bcb5;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .page-footer-wrapper .pane-custom {
+    clear: both;
+    padding-top: 30px;
+    text-align: center;
+    color: #c1bcb5;
+  }
+  .page-footer-wrapper .pane-custom p {
+    font-size: 13px;
+  }
   .page-footer-wrapper .pane-custom.pane-2 {
     float: right;
     margin-top: 85px; }
@@ -3873,6 +3887,19 @@ body {
   font-style: normal;
   text-decoration: none;
   color: #222;
+}
+.form-textarea-wrapper textarea {
+  background-color: #fff;
+  font-family: "open sans", sans-serif;
+  padding: 10px;
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #f0f0f0;
+}
+.webform-component-textarea {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .page-user .pane-page-content form input[type="text"],
@@ -4480,7 +4507,7 @@ body {
         color: #e2b889;
         font-size: 20px;
         background: url(../images/bronze_g.png) no-repeat 90% center; }
-        .page-gallery .frame-prices .pane-content .col-md-9 ul:first-child li:first-child.active {
+        .page-gallery .frame-prices .pane-content .col-md-9 ul.active:first-child li:first-child {
           background-image: url(../images/bronze_active.png);
           border-bottom: 2px solid #e1b88a;
           background-color: #f9f9f9; }
@@ -4488,7 +4515,7 @@ body {
         background: url(../images/silver_g.png) no-repeat 90% center;
         color: #bababa;
         font-size: 20px; }
-        .page-gallery .frame-prices .pane-content .col-md-9 ul:nth-child(2) li:first-child.active {
+        .page-gallery .frame-prices .pane-content .col-md-9 ul.active:nth-child(2) li:first-child {
           background-image: url(../images/silver_active.png);
           background-color: #f9f9f9;
           border-bottom: 1px solid #bababa; }
@@ -4496,7 +4523,7 @@ body {
         background: url(../images/gold_g.png) no-repeat 90% center;
         color: #fab753;
         font-size: 20px; }
-        .page-gallery .frame-prices .pane-content .col-md-9 ul:nth-child(3) li:first-child.active {
+        .page-gallery .frame-prices .pane-content .col-md-9 ul.active:nth-child(3) li:first-child {
           background-image: url(../images/gold_active.png);
           background-color: #f9f9f9;
           border-bottom: 1px solid #fab753; }
@@ -4506,7 +4533,7 @@ body {
         background: url(../images/diamond_g.png) no-repeat 90% center;
         color: #a4b4d7;
         font-size: 20px; }
-        .page-gallery .frame-prices .pane-content .col-md-9 ul:last-child li:first-child.active {
+        .page-gallery .frame-prices .pane-content .col-md-9 ul.active:last-child li:first-child {
           background-image: url(../images/diamond_active.png);
           background-color: #f9f9f9;
           border-bottom: 1px solid #a4b4d7; }
@@ -5103,4 +5130,32 @@ body {
   font-size: 15px;
   margin-bottom: 3px;
   text-transform: uppercase;
+}
+
+.page-gallery .frame-prices .pane-custom ul.col-md-3 {
+  cursor: pointer;
+}
+.views-widget-filter-field_picture_type_tid {
+  position: absolute;
+  left: -10000px;
+}
+
+/* Footer. */
+.page-footer-wrapper .pane-page-site-name {
+  display: block;
+  font-family: 'brandon_g_bold', sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  margin: 35px 0 0 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #c1bcb5;
+}
+.page-footer-wrapper .pane-page-site-name a {
+  text-decoration: none;
+  color: #c1bcb5;
+}
+
+#webform-component-paintings {
+  display: none;
 }
